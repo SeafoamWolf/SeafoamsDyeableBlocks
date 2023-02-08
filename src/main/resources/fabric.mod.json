@@ -1,39 +1,42 @@
 {
   "schemaVersion": 1,
   
-  "id": "seafoamstuff",
+  "id": "seafoamsdyeableblocks",
   "version": "${version}",
 
-  "name": "Seafoam's Stuffs",
-  "description": "A cosmetic focused mod including a new resource.",
-  "authors": [ "SeafoamWolf" ],
+  "name": "Seafoam's Dyeable Blocks",
+  "description": "A cosmetic mod adding in multiple dyeable blocks for decoration!",
+  "authors": [
+    "SeafoamWolf"
+  ],
 
   "contact": {
     "homepage": "https://www.gamesbyseafoam.com/"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/seafoamstuff/icon.png",
 
+  "icon": "assets/seafoamsdyeableblocks/icon.png",
   "environment": "*",
 
   "entrypoints": {
     "main": [
-      "net.seafoamstuff.SeafoamStuff"
+      "seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks"
     ],
     "client": [
-      "net.seafoamstuff.SeafoamStuffClient"
-    ]
+      "seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocksClient"
+    ],
+    "fabric-datagen": [
+			"seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocksDataGenerator"
+		]
   },
 
-  "mixins": [
-    "seafoamstuff.mixins.json"
-  ],
+  "mixins": [],
 
   "depends": {
-    "fabricloader": ">=0.14.8",
+    "fabricloader": ">=0.14.14",
     "fabric": "*",
-    "minecraft": "~1.18.2",
+    "minecraft": "1.19.4-alpha.23.6.a",
     "java": ">=17"
   },
 

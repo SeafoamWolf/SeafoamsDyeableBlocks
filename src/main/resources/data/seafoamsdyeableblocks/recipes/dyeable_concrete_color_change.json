@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "seafoamsdyeableblocks:dyeable_concrete"
+    }
+  ],
+  "result": {
+    "item": "seafoamsdyeableblocks:dyeable_concrete"
+  }
+}

@@ -1,5 +1,0 @@
-{	"parent": "seafoamstuff:block/rgb_block",
-	"textures": {
-		"all": "minecraft:block/white_concrete"
-	}
-}
