@@ -1,6 +1,0 @@
-{
-    "parent": "seafoamstuff:block/owobserver",
-    "textures": {
-        "bottom": "block/observer_back_on"
-    }
-}

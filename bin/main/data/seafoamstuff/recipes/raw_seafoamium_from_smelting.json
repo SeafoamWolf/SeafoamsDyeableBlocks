@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "seafoamstuff:seafoamium_ore"
-  },
-  "result": "seafoamstuff:raw_seafoamium",
-  "experience": 0.5,
-  "cookingtime": 200
-}
