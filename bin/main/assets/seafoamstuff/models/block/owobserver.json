@@ -1,0 +1,7 @@
+{
+    "parent": "block/observer",
+    "textures": {
+        "front": "seafoamstuff:block/owobserver_front",
+        "particle": "seafoamstuff:block/owobserver_front"
+    }
+}

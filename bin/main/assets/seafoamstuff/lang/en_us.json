@@ -1,0 +1,23 @@
+{
+  "block.seafoamstuff.seafoamium_ore": "Seafoamium Ore",
+  "block.seafoamstuff.deepslate_seafoamium_ore": "Deepslate Seafoamium Ore",
+  "block.seafoamstuff.raw_seafoamium_block": "Raw Seafoamium Block",
+  "block.seafoamstuff.seafoamium_block": "Seafoamium Block",
+  
+  "block.seafoamstuff.rgb_concrete": "RGB Concrete",
+  
+  "block.seafoamstuff.owobserver": "òwóbserver",
+  
+  "item.seafoamstuff.raw_seafoamium": "Raw Seafoamium",
+  "item.seafoamstuff.seafoamium_ingot": "Seafoamium Ingot",
+  
+  "item.seafoamstuff.invisible_helmet": "Invisible Helmet",
+  "item.seafoamstuff.invisible_chestplate": "Invisible Chestplate",
+  "item.seafoamstuff.invisible_leggings": "Invisible Leggings",
+  "item.seafoamstuff.invisible_boots": "Invisible Boots",
+  
+  "item.seafoamstuff.puro_mask": "Puro's Mask",
+  "item.seafoamstuff.seafoam_tail": "Seafoam Tail",
+  
+  "itemGroup.seafoamstuff.seafoam_group": "Seafoam's Stuff"
+}

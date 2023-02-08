@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "seafoamstuff:seafoamium_block"
+    }
+  ],
+  "result": {
+    "item": "seafoamstuff:seafoamium_ingot",
+    "count": 9
+  }
+}

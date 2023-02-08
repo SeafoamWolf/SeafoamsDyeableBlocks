@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W W",
+    "WWW",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "seafoamstuff:invisible_chestplate",
+    "count": 1
+  }
+}

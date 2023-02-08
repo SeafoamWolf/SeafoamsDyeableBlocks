@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "seafoamstuff:block/seafoamium_block_side",
+    "north": "seafoamstuff:block/seafoamium_block_side",
+    "south": "seafoamstuff:block/seafoamium_block_side",
+    "east": "seafoamstuff:block/seafoamium_block_side",
+    "west": "seafoamstuff:block/seafoamium_block_side",
+    "up": "seafoamstuff:block/seafoamium_block_top",
+    "down": "seafoamstuff:block/seafoamium_block_bottom"
+  }
+}
