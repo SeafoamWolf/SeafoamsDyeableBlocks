@@ -20,14 +20,6 @@ repositories {
 }
 
 loom {
-    splitEnvironmentSourceSets()
-
-    mods {
-        modid {
-            sourceSet sourceSets.main
-            sourceSet sourceSets.client
-        }
-    }
     runs {
         // This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
         datagen {
@@ -35,7 +27,7 @@ loom {
             name "Data Generation"
             vmArg "-Dfabric-api.datagen"
             vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
-            vmArg "-Dfabric-api.datagen.modid=seafoams-dyeable-blocks"
+            vmArg "-Dfabric-api.datagen.modid=seafoamsdyeableblocks"
  
             runDir "build/datagen"
         }
@@ -47,7 +39,7 @@ sourceSets {
     main {
         resources {
             srcDirs += [
-                'src/main/generated'
+                    'src/main/generated'
             ]
         }
     }

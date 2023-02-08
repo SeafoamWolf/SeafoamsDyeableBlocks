@@ -6,6 +6,7 @@
 
   "name": "Seafoam's Dyeable Blocks",
   "description": "A cosmetic mod adding in multiple dyeable blocks for decoration!",
+  
   "authors": [
     "SeafoamWolf"
   ],
@@ -31,14 +32,10 @@
 		]
   },
 
-  "mixins": [],
-
   "depends": {
     "fabricloader": ">=0.14.14",
     "fabric": "*",
     "minecraft": "1.19.4-alpha.23.6.a",
     "java": ">=17"
-  },
-
-  "suggests": {}
+  }
 }

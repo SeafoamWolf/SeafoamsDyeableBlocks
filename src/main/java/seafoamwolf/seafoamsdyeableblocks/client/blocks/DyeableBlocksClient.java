@@ -1,9 +1,11 @@
-package seafoamwolf.seafoamsdyeableblocks.blocks;
+package seafoamwolf.seafoamsdyeableblocks.client.blocks;
 
 import java.util.List;
-import java.util.ArrayList;
 
-import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+
+import net.fabricmc.fabric.api.client.rendering.v1.*;
 
 import seafoamwolf.seafoamsdyeableblocks.blocks.DyeableBlocks;
 import seafoamwolf.seafoamsdyeableblocks.blocks.DyeableBlockRegister;
@@ -11,6 +13,7 @@ import seafoamwolf.seafoamsdyeableblocks.blocks.DyeableBlockEntity;
 import seafoamwolf.seafoamsdyeableblocks.items.DyeableBlockItem;
 
 public class DyeableBlocksClient {
+	@Environment(EnvType.CLIENT)
 	public static void register() {
         List<DyeableBlockRegister> dyeableBlocks = DyeableBlocks.GetDyeableBlocks();
 
