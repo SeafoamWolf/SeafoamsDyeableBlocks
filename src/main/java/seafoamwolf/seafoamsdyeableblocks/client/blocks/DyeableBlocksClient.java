@@ -6,26 +6,34 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 
 import net.fabricmc.fabric.api.client.rendering.v1.*;
+import net.minecraft.block.entity.BlockEntity;
+import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlockEntity;
+import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlockRegister;
+import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlocks;
+import seafoamwolf.seafoamsdyeableblocks.item.DyeableBlockItem;
+import seafoamwolf.seafoamsdyeableblocks.item.DyeableCustomItem;
+import seafoamwolf.seafoamsdyeableblocks.item.DyeableItems;
 
-import seafoamwolf.seafoamsdyeableblocks.blocks.DyeableBlocks;
-import seafoamwolf.seafoamsdyeableblocks.blocks.DyeableBlockRegister;
-import seafoamwolf.seafoamsdyeableblocks.blocks.DyeableBlockEntity;
-import seafoamwolf.seafoamsdyeableblocks.items.DyeableBlockItem;
-
+@Environment(value=EnvType.CLIENT)
 public class DyeableBlocksClient {
-	@Environment(EnvType.CLIENT)
 	public static void register() {
-        List<DyeableBlockRegister> dyeableBlocks = DyeableBlocks.GetDyeableBlocks();
+        List<DyeableBlockRegister> dyeableBlocks = DyeableBlocks.GetDyeable();
+        List<DyeableCustomItem> dyeableItems = DyeableItems.GetDyeable();
 
 		dyeableBlocks.forEach((block) -> ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
-			if (view.getBlockEntity(pos) != null) {
-				return ((DyeableBlockEntity)view.getBlockEntity(pos)).getColor();
-			} else {
-				return 16777215;
-			}
+			BlockEntity blockEntity = view.getBlockEntity(pos);
+			int color = 16777215;
+
+			if (blockEntity != null && blockEntity instanceof DyeableBlockEntity)
+				color = ((DyeableBlockEntity)blockEntity).getColor();
+			
+			return color;
 		}, block.Block));
 
 		dyeableBlocks.forEach((block) -> ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
             ((DyeableBlockItem)stack.getItem()).getColor(stack), block.Item));
+
+		dyeableItems.forEach((item) -> ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
+            ((DyeableCustomItem)stack.getItem()).getColor(stack), item));
 	}
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "seafoamsdyeableblocks:monochrome_dye"
+    },
+    {
+      "item": "seafoamsdyeableblocks:warm_dye"
+    },
+    {
+      "item": "seafoamsdyeableblocks:cool_dye"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "result": {
+    "item": "seafoamsdyeableblocks:color_essence"
+  }
+}

@@ -1,4 +1,4 @@
-package seafoamwolf.seafoamsdyeableblocks.blocks;
+package seafoamwolf.seafoamsdyeableblocks.block;
 
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.block.BlockState;
@@ -7,9 +7,12 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
+import net.minecraft.state.property.BooleanProperty;
+import net.fabricmc.fabric.api.rendering.data.v1.*;
 
-public class DyeableBlockEntity extends BlockEntity {
+public class DyeableBlockEntity extends BlockEntity implements RenderAttachmentBlockEntity {
     public static final int DEFAULT_COLOR = 16777215;
+	public static final BooleanProperty UPDATE = BooleanProperty.of("update");
 
 	private int color;
 

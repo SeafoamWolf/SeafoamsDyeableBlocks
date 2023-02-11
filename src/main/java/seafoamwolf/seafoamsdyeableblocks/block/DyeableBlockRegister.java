@@ -1,21 +1,21 @@
-package seafoamwolf.seafoamsdyeableblocks.blocks;
+package seafoamwolf.seafoamsdyeableblocks.block;
 
 import net.minecraft.util.Identifier;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.Registries;
-import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 
 import seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks;
-import seafoamwolf.seafoamsdyeableblocks.items.DyeableBlockItem;
+import seafoamwolf.seafoamsdyeableblocks.item.DyeableBlockItem;
 
 public class DyeableBlockRegister {
-    public final DyeableBlock Block;
-    public final DyeableBlockItem Item;
-    public final BlockEntityType<DyeableBlockEntity> BlockEntity;
+    public final Block Block;
+    public final BlockItem Item;
 
     public DyeableBlockRegister(String blockId, FabricBlockSettings blockSettings) {
         Block = new DyeableBlock(blockSettings);
@@ -25,9 +25,9 @@ public class DyeableBlockRegister {
 
         Registry.register(Registries.BLOCK, id, Block);
 		Registry.register(Registries.ITEM, id, Item);
-
-		BlockEntity = Registry.register(Registries.BLOCK_ENTITY_TYPE,
-			new Identifier(SeafoamsDyeableBlocks.MOD_ID, blockId + "_block_entity"),
-			FabricBlockEntityTypeBuilder.create(DyeableBlockEntity::new, Block).build(null));
+        
+        ItemGroupEvents.modifyEntriesEvent(SeafoamsDyeableBlocks.ITEM_GROUP).register(content -> {
+            content.add(Item);
+        });
     }
 }
