@@ -5,14 +5,18 @@ import java.util.ArrayList;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+
+import net.minecraft.block.cauldron.CauldronBehavior;
+import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
+
 import seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks;
 
 public class DyeableItems {
-	private static List<DyeableCustomItem> dyeable = new ArrayList<DyeableCustomItem>();
+	private static List<Item> dyeable = new ArrayList<Item>();
 
     public static TooltippedItem MONOCHROME_DYE;
     public static TooltippedItem WARM_DYE;
@@ -60,11 +64,14 @@ public class DyeableItems {
             content.add(WARM_DYE);
             content.add(COOL_DYE);
             content.add(COLOR_ESSENCE);
+            content.add(MASTER_COLOR_ESSENCE);
             content.add(DYNAMIC_DYE);
         });
+        
+        CauldronBehavior.WATER_CAULDRON_BEHAVIOR.put(DYNAMIC_DYE, CauldronBehavior.CLEAN_DYEABLE_ITEM);
     }
 
-	public static List<DyeableCustomItem> GetDyeable() {
+	public static List<Item> GetDyeable() {
 		return dyeable;
 	}
 }

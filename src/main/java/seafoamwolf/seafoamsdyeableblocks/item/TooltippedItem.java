@@ -15,7 +15,6 @@ public class TooltippedItem extends Item {
 
 	public TooltippedItem(Settings settings, String itemId) {
 		super(settings);
-
         ITEM_ID = itemId;
 	}
 

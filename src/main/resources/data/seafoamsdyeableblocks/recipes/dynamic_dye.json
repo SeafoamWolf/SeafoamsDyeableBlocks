@@ -8,7 +8,6 @@
     { "tag": "seafoamsdyeableblocks:any_color_essence" }
   ],
   "result": {
-    "item": "seafoamsdyeableblocks:dynamic_dye",
-    "count": 3
+    "item": "seafoamsdyeableblocks:dynamic_dye"
   }
 }

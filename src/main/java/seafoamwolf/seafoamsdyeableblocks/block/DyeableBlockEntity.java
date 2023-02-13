@@ -1,18 +1,16 @@
 package seafoamwolf.seafoamsdyeableblocks.block;
 
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.event.GameEvent;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.network.listener.ClientPlayPacketListener;
-import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
-import net.minecraft.state.property.BooleanProperty;
-import net.fabricmc.fabric.api.rendering.data.v1.*;
 
-public class DyeableBlockEntity extends BlockEntity implements RenderAttachmentBlockEntity {
+public class DyeableBlockEntity extends BlockEntity {
     public static final int DEFAULT_COLOR = 16777215;
-	public static final BooleanProperty UPDATE = BooleanProperty.of("update");
 
 	private int color;
 
@@ -21,8 +19,13 @@ public class DyeableBlockEntity extends BlockEntity implements RenderAttachmentB
 		this.color = DEFAULT_COLOR;
 	}
 
-	public void setColor(int newColor) {
+	public void setColor(int newColor, LivingEntity user) {
 		this.color = newColor;
+		
+		this.world.emitGameEvent(GameEvent.BLOCK_CHANGE, this.getPos(), GameEvent.Emitter.of(user, this.getCachedState()));
+		this.updateListeners();
+
+		this.markDirty();
 	}
 
 	public int getColor() {
@@ -32,8 +35,8 @@ public class DyeableBlockEntity extends BlockEntity implements RenderAttachmentB
 	// Serialize the BlockEntity
     @Override
     public void writeNbt(NbtCompound tag) {
-        tag.putInt("color", this.color);
         super.writeNbt(tag);
+        tag.putInt("color", this.color);
     }
 
 	// Deserialize the BlockEntity
@@ -43,17 +46,19 @@ public class DyeableBlockEntity extends BlockEntity implements RenderAttachmentB
 		this.color = tag.getInt("color");
 	}
 
-	@Override
-	public Packet<ClientPlayPacketListener> toUpdatePacket() {
-		return BlockEntityUpdateS2CPacket.create(this);
-	}
+    @Override
+    public NbtCompound toInitialChunkDataNbt() {
+        NbtCompound nbtCompound = new NbtCompound();
+        this.writeNbt(nbtCompound);
+        return nbtCompound;
+    }
 
-	@Override
-	public NbtCompound toInitialChunkDataNbt() {
-		return createNbt();
-	}
+    private void updateListeners() {
+        this.markDirty();
+        this.getWorld().updateListeners(this.getPos(), this.getCachedState(), this.getCachedState(), Block.NOTIFY_ALL);
+    }
 
-	public Object getRenderAttachmentData() {
-		return this;
-	}
+    public BlockEntityUpdateS2CPacket toUpdatePacket() {
+        return BlockEntityUpdateS2CPacket.create(this);
+    }
 }

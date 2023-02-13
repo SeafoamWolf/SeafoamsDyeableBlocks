@@ -35,7 +35,7 @@ public class DyeableBlock extends Block implements BlockEntityProvider {
 			DyeableBlockEntity dyeableEntity = (DyeableBlockEntity)blockEntity;
 			NbtCompound tag = item.getOrCreateSubNbt("display");
 			
-			dyeableEntity.setColor(tag.contains("color") ? tag.getInt("color") : 16777215);
+			dyeableEntity.setColor(tag.contains("color") ? tag.getInt("color") : 16777215, entity);
 		}
 
 		super.onPlaced(world, pos, blockState, entity, item);
@@ -97,7 +97,7 @@ public class DyeableBlock extends Block implements BlockEntityProvider {
 
 			if (dyeColor != blockColor) {
 				player.playSound(SoundEvents.ITEM_DYE_USE, 1, 1);
-				((DyeableBlockEntity)entity).setColor(dyeColor);
+				((DyeableBlockEntity)entity).setColor(dyeColor, player);
 
 				state.updateNeighbors(world, pos, Block.NOTIFY_ALL);
 
