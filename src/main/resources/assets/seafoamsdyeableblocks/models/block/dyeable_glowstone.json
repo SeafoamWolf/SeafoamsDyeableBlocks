@@ -1,0 +1,5 @@
+{	"parent": "seafoamsdyeableblocks:block/dyeable_block",
+	"textures": {
+		"all": "seafoamsdyeableblocks:block/dyeable_glowstone"
+	}
+}

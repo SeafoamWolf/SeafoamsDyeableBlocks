@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "tag": "minecraft:planks" },
+    { "tag": "minecraft:planks" },
+    { "tag": "minecraft:planks" },
+    { "tag": "minecraft:planks" },
+    { "tag": "minecraft:planks" },
+    { "tag": "minecraft:planks" },
+    { "tag": "minecraft:planks" },
+    { "tag": "minecraft:planks" },
+    { "tag": "seafoamsdyeableblocks:any_color_essence" }
+  ],
+  "result": {
+    "item": "seafoamsdyeableblocks:dyeable_planks",
+    "count": 8
+  }
+}

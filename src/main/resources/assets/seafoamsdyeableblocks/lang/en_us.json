@@ -10,6 +10,9 @@
 
   "block.seafoamsdyeableblocks.dyeable_concrete": "Dyeable Concrete",
   "block.seafoamsdyeableblocks.dyeable_wool": "Dyeable Wool",
+  "block.seafoamsdyeableblocks.dyeable_planks": "Dyeable Planks",
+  "block.seafoamsdyeableblocks.dyeable_glowstone": "Dyeable Glowstone",
+  "block.seafoamsdyeableblocks.dyeable_bricks": "Dyeable Bricks",
 
   "item.seafoamsdyeableblocks.monochrome_dye.tooltip0": "Combination of all monochrome dyes.",
   "item.seafoamsdyeableblocks.warm_dye.tooltip0": "Combination of all warm colored dyes.",

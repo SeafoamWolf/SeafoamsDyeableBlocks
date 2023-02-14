@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-	  "seafoamsdyeableblocks:dyeable_concrete"
+	  "seafoamsdyeableblocks:dyeable_concrete",
+	  "seafoamsdyeableblocks:dyeable_bricks"
   ]
 }

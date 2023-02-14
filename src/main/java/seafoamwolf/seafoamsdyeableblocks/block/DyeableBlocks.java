@@ -19,8 +19,10 @@ public class DyeableBlocks {
 	public static BlockEntityType<DyeableBlockEntity> DYEABLE_BLOCK_ENTITY;
 
 	public static DyeableBlockRegister DYEABLE_CONCRETE;
-	public static DyeableBlockRegister DYEABLE_CONCRETE_POWDER;
 	public static DyeableBlockRegister DYEABLE_WOOL;
+	public static DyeableBlockRegister DYEABLE_PLANKS;
+	public static DyeableBlockRegister DYEABLE_GLOWSTONE;
+	public static DyeableBlockRegister DYEABLE_BRICKS;
 
 	public static void register() {
 		DYEABLE_CONCRETE = new DyeableBlockRegister("dyeable_concrete",
@@ -28,9 +30,21 @@ public class DyeableBlocks {
 
 		DYEABLE_WOOL = new DyeableBlockRegister("dyeable_wool",
 			FabricBlockSettings.copyOf(Blocks.WHITE_WOOL));
+
+		DYEABLE_PLANKS = new DyeableBlockRegister("dyeable_planks",
+			FabricBlockSettings.copyOf(Blocks.OAK_PLANKS));
+
+		DYEABLE_GLOWSTONE = new DyeableBlockRegister("dyeable_glowstone",
+			FabricBlockSettings.copyOf(Blocks.GLOWSTONE));
+
+		DYEABLE_BRICKS = new DyeableBlockRegister("dyeable_bricks",
+			FabricBlockSettings.copyOf(Blocks.BRICKS));
 		
 		dyeable.add(DYEABLE_CONCRETE);
 		dyeable.add(DYEABLE_WOOL);
+		dyeable.add(DYEABLE_PLANKS);
+		dyeable.add(DYEABLE_GLOWSTONE);
+		dyeable.add(DYEABLE_BRICKS);
 		
 		DYEABLE_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE,
 			new Identifier(SeafoamsDyeableBlocks.MOD_ID, "dyeable_block_entity"),

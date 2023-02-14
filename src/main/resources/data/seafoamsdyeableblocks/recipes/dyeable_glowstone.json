@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "item": "minecraft:glowstone" },
+    { "item": "minecraft:glowstone" },
+    { "item": "minecraft:glowstone" },
+    { "item": "minecraft:glowstone" },
+    { "item": "minecraft:glowstone" },
+    { "item": "minecraft:glowstone" },
+    { "item": "minecraft:glowstone" },
+    { "item": "minecraft:glowstone" },
+    { "tag": "seafoamsdyeableblocks:any_color_essence" }
+  ],
+  "result": {
+    "item": "seafoamsdyeableblocks:dyeable_glowstone",
+    "count": 8
+  }
+}
