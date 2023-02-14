@@ -1,3 +1,4 @@
+![Thumbnail](https://user-images.githubusercontent.com/124807123/218865781-4007955f-6f92-4406-9840-a3a917b1970d.png)  
 # Seafoam's Dyeable Blocks
 
 Welcome to Seafoam's Dyeable Blocks, my first specialized mod under my own name, SeafoamWolf!  
@@ -15,5 +16,3 @@ Enjoy creating wonderful pixel art and perfectly colored creations with Seafoam'
 - Release versions for 1.19.2 Fabric and Forge  
 - Add more dyeable blocks  
 - Allow vanilla items and sheep to use custom dye colors  
-
-![Thumbnail](https://user-images.githubusercontent.com/124807123/218865781-4007955f-6f92-4406-9840-a3a917b1970d.png)
