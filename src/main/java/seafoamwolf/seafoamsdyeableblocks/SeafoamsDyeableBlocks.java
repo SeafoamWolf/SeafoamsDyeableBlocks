@@ -8,6 +8,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 
 import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlocks;
+import seafoamwolf.seafoamsdyeableblocks.commands.DyeableCommands;
 import seafoamwolf.seafoamsdyeableblocks.item.DyeableItems;
 
 public class SeafoamsDyeableBlocks implements ModInitializer {
@@ -22,5 +23,6 @@ public class SeafoamsDyeableBlocks implements ModInitializer {
 	public void onInitialize() {
 		DyeableBlocks.register();
 		DyeableItems.register();
+		DyeableCommands.register();
 	}
 }

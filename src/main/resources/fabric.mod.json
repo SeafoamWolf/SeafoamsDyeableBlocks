@@ -5,17 +5,19 @@
   "version": "${version}",
 
   "name": "Seafoam's Dyeable Blocks",
-  "description": "A cosmetic mod adding in multiple dyeable blocks for decoration!",
+  "description": "A cosmetic mod adding in multiple dyeable blocks for decoration and pixel art.",
   
   "authors": [
     "SeafoamWolf"
   ],
 
   "contact": {
-    "homepage": "https://www.gamesbyseafoam.com/"
+    "curseforge": "https://www.curseforge.com/minecraft/mc-mods/seafoams-dyeable-blocks",
+    "portfolio": "https://www.gamesbyseafoam.com/",
+    "twitter": "https://twitter.com/SeafoamWolf_"
   },
 
-  "license": "CC0-1.0",
+  "license": "MIT",
 
   "icon": "assets/seafoamsdyeableblocks/icon.png",
   "environment": "*",
