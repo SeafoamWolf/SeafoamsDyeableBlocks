@@ -28,10 +28,7 @@
     ],
     "client": [
       "seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocksClient"
-    ],
-    "fabric-datagen": [
-			"seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocksDataGenerator"
-		]
+    ]
   },
 
   "depends": {
