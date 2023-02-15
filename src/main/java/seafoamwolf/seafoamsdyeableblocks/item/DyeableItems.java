@@ -1,64 +1,36 @@
 package seafoamwolf.seafoamsdyeableblocks.item;
 
-import java.util.List;
-import java.util.ArrayList;
-
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-
-import net.minecraft.block.cauldron.CauldronBehavior;
-import net.minecraft.item.Item;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.Rarity;
+import net.minecraft.core.cauldron.CauldronInteraction;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 import seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks;
 
 public class DyeableItems {
-	private static List<Item> dyeable = new ArrayList<Item>();
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SeafoamsDyeableBlocks.MODID);
 
-    public static TooltippedItem MONOCHROME_DYE;
-    public static TooltippedItem WARM_DYE;
-    public static TooltippedItem COOL_DYE;
-    public static ColorEssenceItem COLOR_ESSENCE;
-    public static ColorEssenceItem MASTER_COLOR_ESSENCE;
+    public static final RegistryObject<Item> MONOCHROME_DYE = ITEMS.register("monochrome_dye", () ->
+        new Item(new Item.Properties().tab(SeafoamsDyeableBlocks.ITEM_TAB)));
+    
+    public static final RegistryObject<Item> WARM_DYE = ITEMS.register("warm_dye", () ->
+        new Item(new Item.Properties().tab(SeafoamsDyeableBlocks.ITEM_TAB)));
 
-    public static DynamicDyeItem DYNAMIC_DYE;
+    public static final RegistryObject<Item> COOL_DYE = ITEMS.register("cool_dye", () ->
+        new Item(new Item.Properties().tab(SeafoamsDyeableBlocks.ITEM_TAB)));
+    
+    public static final RegistryObject<ColorEssenceItem> COLOR_ESSENCE = ITEMS.register("color_essence", () ->
+        new ColorEssenceItem(new Item.Properties().durability(128).rarity(Rarity.RARE).tab(SeafoamsDyeableBlocks.ITEM_TAB)));
+
+    public static final RegistryObject<ColorEssenceItem> MASTER_COLOR_ESSENCE = ITEMS.register("master_color_essence", () ->
+        new ColorEssenceItem(new Item.Properties().durability(1024).rarity(Rarity.EPIC).tab(SeafoamsDyeableBlocks.ITEM_TAB)));
+
+    public static final RegistryObject<DynamicDyeItem> DYNAMIC_DYE = ITEMS.register("dynamic_dye", () ->
+        new DynamicDyeItem(new Item.Properties().durability(1024).tab(SeafoamsDyeableBlocks.ITEM_TAB)));;
 
     public static void register() {
-        // NORMAL ITEMS
-
-        MONOCHROME_DYE = Registry.register(Registry.ITEM,
-            new Identifier(SeafoamsDyeableBlocks.MOD_ID, "monochrome_dye"),
-            new TooltippedItem(new FabricItemSettings().group(SeafoamsDyeableBlocks.ITEM_GROUP), "monochrome_dye"));
-
-        WARM_DYE = Registry.register(Registry.ITEM,
-            new Identifier(SeafoamsDyeableBlocks.MOD_ID, "warm_dye"),
-            new TooltippedItem(new FabricItemSettings().group(SeafoamsDyeableBlocks.ITEM_GROUP), "warm_dye"));
-
-        COOL_DYE = Registry.register(Registry.ITEM,
-            new Identifier(SeafoamsDyeableBlocks.MOD_ID, "cool_dye"),
-            new TooltippedItem(new FabricItemSettings().group(SeafoamsDyeableBlocks.ITEM_GROUP), "cool_dye"));
-
-        COLOR_ESSENCE = Registry.register(Registry.ITEM,
-            new Identifier(SeafoamsDyeableBlocks.MOD_ID, "color_essence"),
-            new ColorEssenceItem(new FabricItemSettings().maxDamage(128).rarity(Rarity.RARE).group(SeafoamsDyeableBlocks.ITEM_GROUP), "color_essence"));
-
-        MASTER_COLOR_ESSENCE = Registry.register(Registry.ITEM,
-            new Identifier(SeafoamsDyeableBlocks.MOD_ID, "master_color_essence"),
-            new ColorEssenceItem(new FabricItemSettings().maxDamage(1024).rarity(Rarity.EPIC).group(SeafoamsDyeableBlocks.ITEM_GROUP), "master_color_essence"));
-        
-        // DYEABLE
-
-        DYNAMIC_DYE = Registry.register(Registry.ITEM,
-            new Identifier(SeafoamsDyeableBlocks.MOD_ID, "dynamic_dye"),
-            new DynamicDyeItem(new FabricItemSettings().maxDamage(1024).group(SeafoamsDyeableBlocks.ITEM_GROUP), "dynamic_dye"));
-
-        dyeable.add(DYNAMIC_DYE);
-        
-        CauldronBehavior.WATER_CAULDRON_BEHAVIOR.put(DYNAMIC_DYE, CauldronBehavior.CLEAN_DYEABLE_ITEM);
+        CauldronInteraction.WATER.put(DYNAMIC_DYE.get(), CauldronInteraction.DYED_ITEM);
     }
-
-	public static List<Item> GetDyeable() {
-		return dyeable;
-	}
 }

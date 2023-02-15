@@ -1,5 +1,5 @@
 {
-  "itemGroup.seafoamsdyeableblocks.item_group": "Seafoam's Dyeable Blocks",
+  "itemGroup.seafoamsdyeableblocks.item_tab": "Seafoam's Dyeable Blocks",
 
   "item.seafoamsdyeableblocks.monochrome_dye": "Monochrome Dye",
   "item.seafoamsdyeableblocks.warm_dye": "Warm Dye",
@@ -12,18 +12,5 @@
   "block.seafoamsdyeableblocks.dyeable_wool": "Dyeable Wool",
   "block.seafoamsdyeableblocks.dyeable_planks": "Dyeable Planks",
   "block.seafoamsdyeableblocks.dyeable_glowstone": "Dyeable Glowstone",
-  "block.seafoamsdyeableblocks.dyeable_bricks": "Dyeable Bricks",
-
-  "item.seafoamsdyeableblocks.monochrome_dye.tooltip0": "Combination of all monochrome dyes.",
-  "item.seafoamsdyeableblocks.warm_dye.tooltip0": "Combination of all warm colored dyes.",
-  "item.seafoamsdyeableblocks.cool_dye.tooltip0": "Combination of all cool colored dyes.",
-
-  "item.seafoamsdyeableblocks.color_essence.tooltip0": "Combination of all dyes.",
-  "item.seafoamsdyeableblocks.color_essence.tooltip1": "Converts blocks into dyeable blocks.",
-
-  "item.seafoamsdyeableblocks.master_color_essence.tooltip0": "Unbreakable",
-  "item.seafoamsdyeableblocks.master_color_essence.tooltip1": "Combination of all dyes.",
-  "item.seafoamsdyeableblocks.master_color_essence.tooltip2": "Converts blocks into dyeable blocks.",
-
-  "item.seafoamsdyeableblocks.dynamic_dye.tooltip0": "Use on dyeable blocks in the world to dye them."
+  "block.seafoamsdyeableblocks.dyeable_bricks": "Dyeable Bricks"
 }

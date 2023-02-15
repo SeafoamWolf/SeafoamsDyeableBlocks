@@ -1,21 +1,16 @@
 package seafoamwolf.seafoamsdyeableblocks.item;
 
-import net.minecraft.item.DyeableItem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.nbt.NbtElement;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.item.DyeableLeatherItem;
+import net.minecraft.world.item.ItemStack;
 
-public interface DyeableItemInterface extends DyeableItem {
-    public static final int DEFAULT_COLOR = 16777215;
+public interface DyeableItemInterface extends DyeableLeatherItem {
+    int DEFAULT_COLOR = 16777215;
 
     @Override
-    default public int getColor(ItemStack stack) {
-        NbtCompound nbtCompound = stack.getSubNbt(DISPLAY_KEY);
-
-        if (nbtCompound != null && nbtCompound.contains(COLOR_KEY, NbtElement.NUMBER_TYPE))
-            return nbtCompound.getInt(COLOR_KEY);
-        
-        return DEFAULT_COLOR;
+    default int getColor(ItemStack stack) {
+        CompoundTag compoundtag = stack.getTagElement(TAG_DISPLAY);
+        return compoundtag != null && compoundtag.contains(TAG_COLOR, 99) ? compoundtag.getInt(TAG_COLOR) : DEFAULT_COLOR;
     }
 }
 
