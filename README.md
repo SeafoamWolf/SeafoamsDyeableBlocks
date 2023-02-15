@@ -9,11 +9,11 @@ Available on Forge and Fabric!
 
 ## [Support me on Patreon!](https://www.patreon.com/SeafoamWolf)
 
-## Other Links:
+## Other Links
 - [Curseforge](https://www.curseforge.com/minecraft/mc-mods/seafoams-dyeable-blocks)
 - [Portfolio](https://www.gamesbyseafoam.com)
 - [Twitter](https://twitter.com/SeafoamWolf_/)  
 
-## Future Plans:
+## Future Plans
 - Add more dyeable blocks  
 - Allow vanilla items and sheep to use custom dye colors  
