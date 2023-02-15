@@ -1,4 +1,4 @@
-![Thumbnail](https://user-images.githubusercontent.com/124807123/218865781-4007955f-6f92-4406-9840-a3a917b1970d.png)  
+  ![Thumbnail](https://user-images.githubusercontent.com/124807123/218914089-dbe0ec04-51d8-4531-8de6-a7bbcbac9f98.png)  
 # Seafoam's Dyeable Blocks
 
 Welcome to Seafoam's Dyeable Blocks, my first specialized mod under my own name, SeafoamWolf!  
