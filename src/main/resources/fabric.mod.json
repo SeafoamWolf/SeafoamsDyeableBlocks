@@ -28,17 +28,14 @@
     ],
     "client": [
       "seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocksClient"
-    ],
-    "fabric-datagen": [
-			"seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocksDataGenerator"
-		]
+    ]
   },
 
   "depends": {
     "fabricloader": ">=0.14.14",
     "fabric": "*",
 		"fabric-api": "*",
-    "minecraft": "1.19.4-alpha.23.6.a",
+    "minecraft": "1.19.2",
     "java": ">=17"
   }
 }
