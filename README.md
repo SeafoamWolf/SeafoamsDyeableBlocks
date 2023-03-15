@@ -1,9 +1,19 @@
-# Fabric Example Mod
+  ![Thumbnail](https://user-images.githubusercontent.com/124807123/218914089-dbe0ec04-51d8-4531-8de6-a7bbcbac9f98.png)  
+# Seafoam's Dyeable Blocks
 
-## Setup
+Welcome to Seafoam's Dyeable Blocks, my first specialized mod under my own name, SeafoamWolf!  
+Adding in a variety of dyeable blocks as well as items for crafting and actually dyeing said blocks, this mod is a pixel artist's dream!  
+Enjoy creating wonderful pixel art and perfectly colored creations with Seafoam's Dyeable Blocks!  
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+Available on Forge and Fabric!  
 
-## License
+## [Support me on Patreon!](https://www.patreon.com/SeafoamWolf)
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+## Other Links
+- [Curseforge](https://www.curseforge.com/minecraft/mc-mods/seafoams-dyeable-blocks)
+- [Portfolio](https://www.gamesbyseafoam.com)
+- [Twitter](https://twitter.com/SeafoamWolf_/)  
+
+## Future Plans
+- Add more dyeable blocks  
+- Allow vanilla items and sheep to use custom dye colors  
