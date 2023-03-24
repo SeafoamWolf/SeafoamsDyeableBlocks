@@ -12,8 +12,10 @@ public interface DyeableItemInterface extends DyeableItem {
     default public int getColor(ItemStack stack) {
         NbtCompound nbtCompound = stack.getSubNbt(DISPLAY_KEY);
 
-        if (nbtCompound != null && nbtCompound.contains(COLOR_KEY, NbtElement.NUMBER_TYPE))
+        if (nbtCompound != null && nbtCompound.contains(COLOR_KEY, NbtElement.NUMBER_TYPE)) {
+            stack.getNbt().putInt("HideFlags", 64);
             return nbtCompound.getInt(COLOR_KEY);
+        }
         
         return DEFAULT_COLOR;
     }

@@ -36,6 +36,6 @@ public class DyeableBlocksClient {
             ((DyeableBlockItem)stack.getItem()).getColor(stack), block.Item));
 
 		dyeableItems.forEach((item) -> ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
-            ((DyedItem)stack.getItem()).getColor(stack), item));
+            ((tintIndex == 1 ? ((DyedItem)stack.getItem()).getColor(stack) : 16777215)), item));
 	}
 }
