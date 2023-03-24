@@ -11,7 +11,7 @@ Enjoy creating wonderful pixel art and perfectly colored creations with Seafoam'
 
 [![modrinth_64h](https://user-images.githubusercontent.com/124807123/227645045-dfb998e2-8876-4e21-b4f8-1aa542bb047f.png)](https://modrinth.com/mod/seafoams-dyeable-blocks)  [![curseforge_64h](https://user-images.githubusercontent.com/124807123/227645071-88451845-17e2-4713-8ff4-486b23fe1425.png)](https://www.curseforge.com/minecraft/mc-mods/seafoams-dyeable-blocks)   
 
-# Support me!   
+# Ways you can help support me   
 
 
 [![twitter-singular_64h](https://user-images.githubusercontent.com/124807123/227645205-93d34773-a089-4f0f-85bd-7d95c1b91616.png)](https://twitter.com/SeafoamWolf_/) 
