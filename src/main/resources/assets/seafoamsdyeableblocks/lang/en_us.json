@@ -1,12 +1,9 @@
 {
   "itemGroup.seafoamsdyeableblocks.item_tab": "Seafoam's Dyeable Blocks",
 
-  "item.seafoamsdyeableblocks.monochrome_dye": "Monochrome Dye",
-  "item.seafoamsdyeableblocks.warm_dye": "Warm Dye",
-  "item.seafoamsdyeableblocks.cool_dye": "Cool Dye",
   "item.seafoamsdyeableblocks.color_essence": "Color Essence",
   "item.seafoamsdyeableblocks.master_color_essence": "Master Color Essence",
-  "item.seafoamsdyeableblocks.dynamic_dye": "Dynamic Dye",
+  "item.seafoamsdyeableblocks.dynamic_dye": "Dyeable Paintbrush",
 
   "block.seafoamsdyeableblocks.dyeable_concrete": "Dyeable Concrete",
   "block.seafoamsdyeableblocks.dyeable_wool": "Dyeable Wool",

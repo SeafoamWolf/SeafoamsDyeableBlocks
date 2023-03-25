@@ -11,15 +11,6 @@ import seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks;
 
 public class DyeableItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SeafoamsDyeableBlocks.MODID);
-
-    public static final RegistryObject<Item> MONOCHROME_DYE = ITEMS.register("monochrome_dye", () ->
-        new Item(new Item.Properties().tab(SeafoamsDyeableBlocks.ITEM_TAB)));
-    
-    public static final RegistryObject<Item> WARM_DYE = ITEMS.register("warm_dye", () ->
-        new Item(new Item.Properties().tab(SeafoamsDyeableBlocks.ITEM_TAB)));
-
-    public static final RegistryObject<Item> COOL_DYE = ITEMS.register("cool_dye", () ->
-        new Item(new Item.Properties().tab(SeafoamsDyeableBlocks.ITEM_TAB)));
     
     public static final RegistryObject<ColorEssenceItem> COLOR_ESSENCE = ITEMS.register("color_essence", () ->
         new ColorEssenceItem(new Item.Properties().durability(128).rarity(Rarity.RARE).tab(SeafoamsDyeableBlocks.ITEM_TAB)));

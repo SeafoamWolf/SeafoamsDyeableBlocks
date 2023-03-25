@@ -81,7 +81,7 @@ public class SeafoamsDyeableBlocks {
             }, block.Item.get()));
             
             DYEABLE_ITEMS.forEach(item -> event.register((stack, layer) -> {
-                return ((DyedItem)stack.getItem()).getColor(stack);
+                return (layer == 1 ? ((DyedItem)stack.getItem()).getColor(stack) : 16777215);
             }, item));
         }
     }

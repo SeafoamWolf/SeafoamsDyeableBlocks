@@ -7,16 +7,28 @@ public class ColorEssenceItem extends Item {
 	public ColorEssenceItem(Properties properties) {
 		super(properties);
 	}
+    
+    public boolean hasCraftingRemainingItem(ItemStack stack) {
+        return true;
+    }
 
-    public ItemStack getRecipeRemainder(ItemStack stack) {
+    public ItemStack getCraftingRemainingItem(ItemStack stack) {;
+        System.out.println("0");
+        
         if (stack.getMaxDamage() > 1000) {
             // Unbreakable
             return stack.copy();
-        } else if (stack.getDamageValue() < stack.getMaxDamage() - 1) {
-            ItemStack moreDamaged = stack.copy();
-            moreDamaged.setDamageValue(stack.getDamageValue() + 1);
+        } else {
+            int damage = stack.getDamageValue();
+            System.out.println("a");
 
-            return moreDamaged;
+            if (damage < stack.getMaxDamage() - 1) {
+                System.out.println("b");
+                ItemStack moreDamaged = stack.copy();
+                moreDamaged.setDamageValue(damage + 1);
+
+                return moreDamaged;
+            }
         }
 
         return ItemStack.EMPTY;

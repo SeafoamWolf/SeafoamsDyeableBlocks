@@ -21,8 +21,14 @@ public class DyedItem extends Item implements DyeableItemInterface {
 	
 	@Override
 	public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> tooltip, TooltipFlag context) {
-		tooltip.add(Component.literal("#" + Integer.toHexString(getColor(stack)).toUpperCase())
-			.withStyle(ChatFormatting.ITALIC, ChatFormatting.GRAY));
+		String hex = Integer.toHexString(getColor(stack)).toUpperCase();
+		int digitsShort = 6 - hex.length();
+
+		if (digitsShort > 0)
+			for (int i = 0; i < digitsShort; i++)
+				hex = "0" + hex;
+		
+		tooltip.add(Component.literal("#" + hex).withStyle(ChatFormatting.ITALIC, ChatFormatting.GRAY));
 		
         super.appendHoverText(stack, world, tooltip, context);
 	}
