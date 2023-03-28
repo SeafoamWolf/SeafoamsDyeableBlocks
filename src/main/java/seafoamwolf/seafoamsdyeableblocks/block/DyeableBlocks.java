@@ -5,7 +5,8 @@ import java.util.ArrayList;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -45,7 +46,7 @@ public class DyeableBlocks {
 		dyeable.add(DYEABLE_GLOWSTONE);
 		dyeable.add(DYEABLE_BRICKS);
 		
-		DYEABLE_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+		DYEABLE_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE,
 			new Identifier(SeafoamsDyeableBlocks.MOD_ID, "dyeable_block_entity"),
 			FabricBlockEntityTypeBuilder.create(DyeableBlockEntity::new,
 			dyeable.get(0).Block, dyeable.get(1).Block

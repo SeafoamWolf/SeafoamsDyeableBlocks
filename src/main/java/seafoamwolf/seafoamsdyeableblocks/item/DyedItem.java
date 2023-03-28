@@ -15,7 +15,14 @@ public class DyedItem extends TooltippedItem implements DyeableItemInterface {
 
 	@Override
 	public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-		tooltip.add(Text.literal("#" + Integer.toHexString(getColor(stack)).toUpperCase()).formatted(Formatting.ITALIC, Formatting.GRAY));
+		String hex = Integer.toHexString(getColor(stack)).toUpperCase();
+		int digitsShort = 6 - hex.length();
+
+		if (digitsShort > 0)
+			for (int i = 0; i < digitsShort; i++)
+				hex = "0" + hex;
+
+		tooltip.add(Text.literal("#" + hex).formatted(Formatting.ITALIC, Formatting.GRAY));
         super.appendTooltip(stack, world, tooltip, context);
 	}
 }
