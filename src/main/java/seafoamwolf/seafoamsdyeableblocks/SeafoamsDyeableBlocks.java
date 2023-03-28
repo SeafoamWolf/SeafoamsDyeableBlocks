@@ -12,7 +12,6 @@ import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -29,7 +28,7 @@ import seafoamwolf.seafoamsdyeableblocks.item.DyedItem;
 public class SeafoamsDyeableBlocks {
 	public static final String MODID = "seafoamsdyeableblocks";
 
-	public static final SeafoamsDyeableBlocksItemTab ITEM_TAB = new SeafoamsDyeableBlocksItemTab(CreativeModeTab.TABS.length, "item_tab");
+	public static final SeafoamsDyeableBlocksItemTab ITEM_TAB = new SeafoamsDyeableBlocksItemTab(CreativeModeTab.TABS.length, "dyeable_blocks_item_tab");
 
 	public static List<DyeableBlockRegister> DYEABLE_BLOCKS = new ArrayList<>();
 	public static List<DyedItem> DYEABLE_ITEMS = new ArrayList<>();

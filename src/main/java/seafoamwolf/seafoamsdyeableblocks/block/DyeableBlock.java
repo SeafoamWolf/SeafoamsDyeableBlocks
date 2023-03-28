@@ -89,12 +89,13 @@ public class DyeableBlock extends Block implements EntityBlock {
 	@Override
 	public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
 		ItemStack handItem = player.getItemInHand(hand);
-		BlockEntity entity = level.getBlockEntity(pos);
-
-		if (entity == null || !(entity instanceof DyeableBlockEntity))
-			return InteractionResult.PASS;
 		
 		if (handItem.getItem() instanceof DynamicDyeItem) {
+			BlockEntity entity = level.getBlockEntity(pos);
+	
+			if (entity == null || !(entity instanceof DyeableBlockEntity))
+				return InteractionResult.PASS;
+
 			int dyeColor = ((DynamicDyeItem)handItem.getItem()).getColor(handItem);
 			int blockColor = ((DyeableBlockEntity)entity).getColor();
 
@@ -102,7 +103,8 @@ public class DyeableBlock extends Block implements EntityBlock {
 				player.playSound(SoundEvents.DYE_USE, 1, 1);
 				((DyeableBlockEntity)entity).setColor(dyeColor);
 
-				handItem.setDamageValue(handItem.getDamageValue() + 1);
+				if (!player.isCreative())
+					handItem.setDamageValue(handItem.getDamageValue() + 1);
 
 				return InteractionResult.SUCCESS;
 			}
