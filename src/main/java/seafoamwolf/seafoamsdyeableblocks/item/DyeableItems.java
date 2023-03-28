@@ -11,19 +11,12 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Rarity;
-
 import seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks;
 
 public class DyeableItems {
 	private static List<Item> dyeable = new ArrayList<Item>();
 
-    public static TooltippedItem MONOCHROME_DYE;
-    public static TooltippedItem WARM_DYE;
-    public static TooltippedItem COOL_DYE;
-    public static ColorEssenceItem COLOR_ESSENCE;
-    public static ColorEssenceItem MASTER_COLOR_ESSENCE;
-
+    public static Item COLOR_ESSENCE;
     public static DynamicDyeItem DYNAMIC_DYE;
 
     public static void register() {
@@ -31,11 +24,7 @@ public class DyeableItems {
 
         COLOR_ESSENCE = Registry.register(Registries.ITEM,
             new Identifier(SeafoamsDyeableBlocks.MOD_ID, "color_essence"),
-            new ColorEssenceItem(new FabricItemSettings().maxDamage(128).rarity(Rarity.RARE), "color_essence"));
-
-        MASTER_COLOR_ESSENCE = Registry.register(Registries.ITEM,
-            new Identifier(SeafoamsDyeableBlocks.MOD_ID, "master_color_essence"),
-            new ColorEssenceItem(new FabricItemSettings().maxDamage(1024).rarity(Rarity.EPIC), "master_color_essence"));
+            new Item(new FabricItemSettings()));
         
         // DYEABLE
 
@@ -49,7 +38,6 @@ public class DyeableItems {
 
         ItemGroupEvents.modifyEntriesEvent(SeafoamsDyeableBlocks.ITEM_GROUP).register(content -> {
             content.add(COLOR_ESSENCE);
-            content.add(MASTER_COLOR_ESSENCE);
             content.add(DYNAMIC_DYE);
         });
     }

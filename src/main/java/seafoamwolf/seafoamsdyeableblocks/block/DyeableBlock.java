@@ -86,22 +86,25 @@ public class DyeableBlock extends Block implements BlockEntityProvider {
 	@Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 		ItemStack handItem = player.getStackInHand(hand);
-		BlockEntity entity = world.getBlockEntity(pos);
-
-		if (entity == null || !(entity instanceof DyeableBlockEntity))
-			return ActionResult.PASS;
 		
 		if (handItem.getItem() instanceof DynamicDyeItem) {
+			BlockEntity entity = world.getBlockEntity(pos);
+
+			if (entity == null || !(entity instanceof DyeableBlockEntity))
+				return ActionResult.PASS;
+				
 			int dyeColor = ((DynamicDyeItem)handItem.getItem()).getColor(handItem);
 			int blockColor = ((DyeableBlockEntity)entity).getColor();
 
 			if (dyeColor != blockColor) {
 				player.playSound(SoundEvents.ITEM_DYE_USE, 1, 1);
+				
 				((DyeableBlockEntity)entity).setColor(dyeColor, player);
 
 				state.updateNeighbors(world, pos, Block.NOTIFY_ALL);
 
-				handItem.setDamage(handItem.getDamage() + 1);
+				if (!player.isCreative())
+					handItem.setDamage(handItem.getDamage() + 1);
 
 				return ActionResult.SUCCESS;
 			}
