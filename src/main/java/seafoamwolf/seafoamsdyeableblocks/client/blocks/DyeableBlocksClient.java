@@ -8,7 +8,6 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.rendering.v1.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.item.Item;
-
 import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlockEntity;
 import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlockRegister;
 import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlocks;

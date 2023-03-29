@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
-
 import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlocks;
 import seafoamwolf.seafoamsdyeableblocks.commands.DyeableCommands;
 import seafoamwolf.seafoamsdyeableblocks.item.DyeableItems;

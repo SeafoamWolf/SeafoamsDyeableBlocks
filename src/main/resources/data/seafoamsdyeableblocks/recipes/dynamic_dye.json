@@ -6,7 +6,7 @@
       "item": "minecraft:feather"
     },
     "B": {
-      "tag": "seafoamsdyeableblocks:any_color_essence"
+      "item": "seafoamsdyeableblocks:color_essence"
     },
     "C": {
       "item": "minecraft:stick"

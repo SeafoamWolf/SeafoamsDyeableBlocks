@@ -2,19 +2,14 @@
   "itemGroup.seafoamsdyeableblocks.item_group": "Seafoam's Dyeable Blocks",
 
   "item.seafoamsdyeableblocks.color_essence": "Color Essence",
-  "item.seafoamsdyeableblocks.master_color_essence": "Master Color Essence",
-  "item.seafoamsdyeableblocks.dynamic_dye": "Dyeable Paintbrush",
 
-  "block.seafoamsdyeableblocks.dyeable_concrete": "Dyeable Concrete",
-  "block.seafoamsdyeableblocks.dyeable_wool": "Dyeable Wool",
-  "block.seafoamsdyeableblocks.dyeable_planks": "Dyeable Planks",
-  "block.seafoamsdyeableblocks.dyeable_glowstone": "Dyeable Glowstone",
-  "block.seafoamsdyeableblocks.dyeable_bricks": "Dyeable Bricks",
+  "item.seafoamsdyeableblocks.dynamic_dye": "Paintbrush",
+  "item.seafoamsdyeableblocks.dynamic_dye.tooltip0": "Dye and use on blocks to color them",
 
-  "item.seafoamsdyeableblocks.color_essence.tooltip0": "Converts blocks into dyeable blocks",
-
-  "item.seafoamsdyeableblocks.master_color_essence.tooltip0": "Unbreakable",
-  "item.seafoamsdyeableblocks.master_color_essence.tooltip1": "Converts blocks into dyeable blocks",
-
-  "item.seafoamsdyeableblocks.dynamic_dye.tooltip0": "Use on dyeable blocks to color them"
+  "block.seafoamsdyeableblocks.dyeable_concrete": "Dyed Concrete",
+  "block.seafoamsdyeableblocks.dyeable_wool": "Dyed Wool",
+  "block.seafoamsdyeableblocks.dyeable_terracotta": "Dyed Terracotta",
+  "block.seafoamsdyeableblocks.dyeable_planks": "Dyed Planks",
+  "block.seafoamsdyeableblocks.dyeable_glowstone": "Dyed Glowstone",
+  "block.seafoamsdyeableblocks.dyeable_bricks": "Dyed Bricks"
 }
