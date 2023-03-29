@@ -16,6 +16,7 @@ A Vanilla+ mod that adds the ability to dye supported blocks to any RGB color!
 ![Paintbrush_Purple](https://user-images.githubusercontent.com/124807123/228614264-aa7b1340-846e-4709-9373-fc346e79a9c9.png)   
 
 # More Info
+[![Read the Documentation](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/documentation/ghpages_64h.png)](https://github.com/SeafoamWolf/SeafoamsDyeableBlocks/wiki)
 ### [Frequently Asked Questions](https://github.com/SeafoamWolf/SeafoamsDyeableBlocks/wiki/FAQ)
 ### [Supported Blocks](https://github.com/SeafoamWolf/SeafoamsDyeableBlocks/wiki/Supported-Blocks)
 ### [Version Changelog](https://github.com/SeafoamWolf/SeafoamsDyeableBlocks/wiki/Changelog)   
