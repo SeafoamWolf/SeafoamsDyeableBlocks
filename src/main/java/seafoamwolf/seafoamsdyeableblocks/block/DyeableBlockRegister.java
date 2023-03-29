@@ -14,10 +14,12 @@ import seafoamwolf.seafoamsdyeableblocks.item.DyeableBlockItem;
 public class DyeableBlockRegister {
     public final Block Block;
     public final BlockItem Item;
+    public final Block[] OriginalBlocks;
 
-    public DyeableBlockRegister(String blockId, FabricBlockSettings blockSettings) {
+    public DyeableBlockRegister(String blockId, FabricBlockSettings blockSettings, Block[] originalBlocks) {
         Block = new DyeableBlock(blockSettings);
         Item = new DyeableBlockItem(Block, new FabricItemSettings().group(SeafoamsDyeableBlocks.ITEM_GROUP));
+        OriginalBlocks = originalBlocks;
 
         Identifier id = new Identifier(SeafoamsDyeableBlocks.MOD_ID, blockId);
 

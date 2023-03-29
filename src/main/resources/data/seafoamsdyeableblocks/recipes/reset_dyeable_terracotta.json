@@ -3,10 +3,10 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "seafoamsdyeableblocks:dyeable_planks"
+      "item": "seafoamsdyeableblocks:dyeable_terracotta"
     }
   ],
   "result": {
-    "item": "minecraft:oak_planks"
+    "item": "minecraft:white_terracotta"
   }
 }

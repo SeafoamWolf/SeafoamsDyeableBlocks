@@ -12,9 +12,11 @@
   ],
 
   "contact": {
+    "twitter": "https://twitter.com/SeafoamWolf_",
     "curseforge": "https://www.curseforge.com/minecraft/mc-mods/seafoams-dyeable-blocks",
-    "portfolio": "https://www.gamesbyseafoam.com/",
-    "twitter": "https://twitter.com/SeafoamWolf_"
+    "modrinth": "https://modrinth.com/mod/seafoams-dyeable-blocks",
+    "sources": "https://github.com/SeafoamWolf/SeafoamsDyeableBlocks",
+    "wiki": "https://github.com/SeafoamWolf/SeafoamsDyeableBlocks/wiki"
   },
 
   "license": "MIT",

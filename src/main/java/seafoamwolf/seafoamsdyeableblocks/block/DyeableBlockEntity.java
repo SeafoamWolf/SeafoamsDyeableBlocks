@@ -24,8 +24,6 @@ public class DyeableBlockEntity extends BlockEntity {
 		
 		this.world.emitGameEvent(GameEvent.BLOCK_CHANGE, this.getPos(), GameEvent.Emitter.of(user, this.getCachedState()));
 		this.updateListeners();
-
-		this.markDirty();
 	}
 
 	public int getColor() {
