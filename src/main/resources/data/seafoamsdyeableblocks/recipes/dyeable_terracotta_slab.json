@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "tag": "seafoamsdyeableblocks:any_terracotta"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "seafoamsdyeableblocks:dyeable_terracotta_slab"
+  },
+  "show_notification": true
+}
