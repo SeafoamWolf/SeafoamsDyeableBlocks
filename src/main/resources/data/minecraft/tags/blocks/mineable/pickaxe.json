@@ -7,6 +7,8 @@
 	  "seafoamsdyeableblocks:dyeable_bricks",
 	  "seafoamsdyeableblocks:dyeable_brick_stairs",
 	  "seafoamsdyeableblocks:dyeable_brick_slab",
-	  "seafoamsdyeableblocks:dyeable_terracotta"
+	  "seafoamsdyeableblocks:dyeable_terracotta",
+	  "seafoamsdyeableblocks:dyeable_terracotta_stairs",
+	  "seafoamsdyeableblocks:dyeable_terracotta_slab"
   ]
 }
