@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "tag": "seafoamsdyeableblocks:any_wool"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "seafoamsdyeableblocks:dyeable_wool_slab"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,6 @@
+{	"parent": "seafoamsdyeableblocks:block/dyeable_block",
+	"render_type": "translucent",
+	"textures": {
+		"all": "minecraft:block/white_stained_glass"
+	}
+}

@@ -3,13 +3,37 @@
 
   "item.seafoamsdyeableblocks.color_essence": "Color Essence",
 
-  "item.seafoamsdyeableblocks.dynamic_dye": "Paintbrush",
-  "item.seafoamsdyeableblocks.dynamic_dye.tooltip0": "Dye and use on blocks to color them",
+  "item.seafoamsdyeableblocks.paintbrush": "Paintbrush",
+  "item.seafoamsdyeableblocks.paintbrush.tooltip0": "Dye and use on blocks to color them",
+
+  "item.seafoamsdyeableblocks.netherite_paintbrush": "Netherite Paintbrush",
+  "item.seafoamsdyeableblocks.netherite_paintbrush.tooltip0": "Dye and use on blocks to color them",
+  "item.seafoamsdyeableblocks.netherite_paintbrush.tooltip1": "Sneak interact a block to pick its color",
 
   "block.seafoamsdyeableblocks.dyeable_concrete": "Dyed Concrete",
+  "block.seafoamsdyeableblocks.dyeable_concrete_stairs": "Dyed Concrete Stairs",
+  "block.seafoamsdyeableblocks.dyeable_concrete_slab": "Dyed Concrete Slab",
+
   "block.seafoamsdyeableblocks.dyeable_wool": "Dyed Wool",
+  "block.seafoamsdyeableblocks.dyeable_wool_stairs": "Dyed Wool Stairs",
+  "block.seafoamsdyeableblocks.dyeable_wool_slab": "Dyed Wool Slab",
+  "block.seafoamsdyeableblocks.dyeable_carpet": "Dyed Carpet",
+
+  "block.seafoamsdyeableblocks.dyeable_bricks": "Dyed Bricks",
+  "block.seafoamsdyeableblocks.dyeable_brick_stairs": "Dyed Brick Stairs",
+  "block.seafoamsdyeableblocks.dyeable_brick_slab": "Dyed Brick Slab",
+
   "block.seafoamsdyeableblocks.dyeable_terracotta": "Dyed Terracotta",
+  "block.seafoamsdyeableblocks.dyeable_terracotta_stairs": "Dyed Terracotta Stairs",
+  "block.seafoamsdyeableblocks.dyeable_terracotta_slab": "Dyed Terracotta Slab",
+
+  "block.seafoamsdyeableblocks.dyeable_stained_glass": "Dyed Stained Glass",
+  "block.seafoamsdyeableblocks.dyeable_stained_glass_pane": "Dyed Stained Glass Pane",
+
   "block.seafoamsdyeableblocks.dyeable_planks": "Dyed Planks",
+  "block.seafoamsdyeableblocks.dyeable_plank_stairs": "Dyed Plank Stairs",
+  "block.seafoamsdyeableblocks.dyeable_plank_slab": "Dyed Plank Slab",
+
   "block.seafoamsdyeableblocks.dyeable_glowstone": "Dyed Glowstone",
-  "block.seafoamsdyeableblocks.dyeable_bricks": "Dyed Bricks"
+  "block.seafoamsdyeableblocks.dyeable_iron_bars": "Dyed Iron Bars"
 }

@@ -14,10 +14,14 @@ public class DyeableItems {
     public static final RegistryObject<Item> COLOR_ESSENCE = ITEMS.register("color_essence", () ->
         new Item(new Item.Properties().tab(SeafoamsDyeableBlocks.ITEM_TAB)));
 
-    public static final RegistryObject<DynamicDyeItem> DYNAMIC_DYE = ITEMS.register("dynamic_dye", () ->
-        new DynamicDyeItem(new Item.Properties().durability(1024).tab(SeafoamsDyeableBlocks.ITEM_TAB)));;
+    public static final RegistryObject<PaintbrushItem> PAINTBRUSH = ITEMS.register("paintbrush", () ->
+        new PaintbrushItem(new Item.Properties().durability(256).tab(SeafoamsDyeableBlocks.ITEM_TAB)));
 
+    public static final RegistryObject<PaintbrushItem> NETHERITE_PAINTBRUSH = ITEMS.register("netherite_paintbrush", () ->
+        new PaintbrushItem(new Item.Properties().durability(2048).tab(SeafoamsDyeableBlocks.ITEM_TAB)));
+    
     public static void register() {
-        CauldronInteraction.WATER.put(DYNAMIC_DYE.get(), CauldronInteraction.DYED_ITEM);
+        CauldronInteraction.WATER.put(PAINTBRUSH.get(), CauldronInteraction.DYED_ITEM);
+        CauldronInteraction.WATER.put(NETHERITE_PAINTBRUSH.get(), CauldronInteraction.DYED_ITEM);
     }
 }
