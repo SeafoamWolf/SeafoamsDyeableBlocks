@@ -22,9 +22,11 @@ public class DyedBlockClient {
 		BlockRenderLayerMap.INSTANCE.putBlock(DyeableBlocks.DYEABLE_BRICKS.Block, RenderLayer.getCutoutMipped());
 		BlockRenderLayerMap.INSTANCE.putBlock(DyeableBlocks.DYEABLE_BRICK_STAIRS.Block, RenderLayer.getCutoutMipped());
 		BlockRenderLayerMap.INSTANCE.putBlock(DyeableBlocks.DYEABLE_BRICK_SLAB.Block, RenderLayer.getCutoutMipped());
-		
-		//BlockRenderLayerMap.INSTANCE.putBlock(DyeableBlocks.DYEABLE_BRICK_WALL.Block, RenderLayer.getCutoutMipped());
-		//BlockRenderLayerMap.INSTANCE.putBlock(DyeableBlocks.DYEABLE_BED.Block, RenderLayer.getCutout());
+
+		BlockRenderLayerMap.INSTANCE.putBlock(DyeableBlocks.DYEABLE_IRON_BARS.Block, RenderLayer.getCutoutMipped());
+
+		BlockRenderLayerMap.INSTANCE.putBlock(DyeableBlocks.DYEABLE_STAINED_GLASS.Block, RenderLayer.getTranslucent());
+		BlockRenderLayerMap.INSTANCE.putBlock(DyeableBlocks.DYEABLE_STAINED_GLASS_PANE.Block, RenderLayer.getTranslucent());
 
 		dyeableBlocks.forEach((block) -> ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
 			int color = 16777215;

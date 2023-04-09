@@ -40,9 +40,12 @@ public class DyeableBlocks {
 	public static DyeableBlockRegister DYEABLE_PLANK_SLAB;
 
 	public static DyeableBlockRegister DYEABLE_GLOWSTONE;
+	public static DyeableBlockRegister DYEABLE_IRON_BARS;
+
+	public static DyeableBlockRegister DYEABLE_STAINED_GLASS;
+	public static DyeableBlockRegister DYEABLE_STAINED_GLASS_PANE;
 	
 	public static void register() {
-
 		// CONCRETE
 
 		DYEABLE_CONCRETE = new DyeableBlockRegister("dyeable_concrete",
@@ -89,6 +92,14 @@ public class DyeableBlocks {
 
 		DYEABLE_TERRACOTTA_SLAB = new DyeableBlockRegister("dyeable_terracotta_slab",
 			new DyeableSlabBlock(FabricBlockSettings.copyOf(Blocks.TERRACOTTA)));
+		
+		// STAINED GLASS
+		
+		DYEABLE_STAINED_GLASS = new DyeableBlockRegister("dyeable_stained_glass",
+			new DyeableStainedGlassBlock(FabricBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS)));
+
+		DYEABLE_STAINED_GLASS_PANE = new DyeableBlockRegister("dyeable_stained_glass_pane",
+			new DyeableStainedGlassPaneBlock(FabricBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS_PANE)));
 
 		// PLANKS
 
@@ -105,6 +116,9 @@ public class DyeableBlocks {
 
 		DYEABLE_GLOWSTONE = new DyeableBlockRegister("dyeable_glowstone",
 			new DyeableBlock(FabricBlockSettings.copyOf(Blocks.GLOWSTONE)));
+
+		DYEABLE_IRON_BARS = new DyeableBlockRegister("dyeable_iron_bars",
+			new DyeablePaneBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS)));
 		
 		dyeable.add(DYEABLE_CONCRETE);
 		dyeable.add(DYEABLE_CONCRETE_STAIRS);
@@ -128,6 +142,11 @@ public class DyeableBlocks {
 		dyeable.add(DYEABLE_PLANK_SLAB);
 
 		dyeable.add(DYEABLE_GLOWSTONE);
+
+		dyeable.add(DYEABLE_IRON_BARS);
+
+		dyeable.add(DYEABLE_STAINED_GLASS);
+		dyeable.add(DYEABLE_STAINED_GLASS_PANE);
 		
 		DYEABLE_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE,
 			new Identifier(SeafoamsDyeableBlocks.MOD_ID, "dyeable_block_entity"),
@@ -137,7 +156,8 @@ public class DyeableBlocks {
 			DYEABLE_BRICKS.Block, DYEABLE_BRICK_STAIRS.Block, DYEABLE_BRICK_SLAB.Block,
 			DYEABLE_TERRACOTTA.Block, DYEABLE_TERRACOTTA_STAIRS.Block, DYEABLE_TERRACOTTA_SLAB.Block,
 			DYEABLE_PLANKS.Block, DYEABLE_PLANK_STAIRS.Block, DYEABLE_PLANK_SLAB.Block,
-			DYEABLE_GLOWSTONE.Block
+			DYEABLE_GLOWSTONE.Block, DYEABLE_IRON_BARS.Block,
+			DYEABLE_STAINED_GLASS.Block, DYEABLE_STAINED_GLASS_PANE.Block
 		).build(null));
 	}
 

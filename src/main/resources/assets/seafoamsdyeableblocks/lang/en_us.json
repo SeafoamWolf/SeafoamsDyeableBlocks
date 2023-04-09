@@ -27,9 +27,13 @@
   "block.seafoamsdyeableblocks.dyeable_terracotta_stairs": "Dyed Terracotta Stairs",
   "block.seafoamsdyeableblocks.dyeable_terracotta_slab": "Dyed Terracotta Slab",
 
+  "block.seafoamsdyeableblocks.dyeable_stained_glass": "Dyed Stained Glass",
+  "block.seafoamsdyeableblocks.dyeable_stained_glass_pane": "Dyed Stained Glass Pane",
+
   "block.seafoamsdyeableblocks.dyeable_planks": "Dyed Planks",
   "block.seafoamsdyeableblocks.dyeable_plank_stairs": "Dyed Plank Stairs",
   "block.seafoamsdyeableblocks.dyeable_plank_slab": "Dyed Plank Slab",
 
-  "block.seafoamsdyeableblocks.dyeable_glowstone": "Dyed Glowstone"
+  "block.seafoamsdyeableblocks.dyeable_glowstone": "Dyed Glowstone",
+  "block.seafoamsdyeableblocks.dyeable_iron_bars": "Dyed Iron Bars"
 }
