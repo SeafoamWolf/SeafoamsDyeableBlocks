@@ -1,7 +1,7 @@
 package seafoamwolf.seafoamsdyeableblocks;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
@@ -13,9 +13,8 @@ import seafoamwolf.seafoamsdyeableblocks.item.DyeableItems;
 public class SeafoamsDyeableBlocks implements ModInitializer {
 	public static final String MOD_ID = "seafoamsdyeableblocks";
 
-	public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder(new Identifier(MOD_ID, "item_group"))
-		.icon(() -> new ItemStack(DyeableItems.COLOR_ESSENCE))
-		.build();
+	public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.build(
+		new Identifier(MOD_ID, "item_group"), () -> new ItemStack(DyeableItems.COLOR_ESSENCE));
 	
 	@Override
 	public void onInitialize() {

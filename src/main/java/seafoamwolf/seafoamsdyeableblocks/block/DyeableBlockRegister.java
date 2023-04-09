@@ -3,14 +3,10 @@ package seafoamwolf.seafoamsdyeableblocks.block;
 import net.minecraft.util.Identifier;
 import seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks;
 import seafoamwolf.seafoamsdyeableblocks.item.DyeableBlockItem;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
-
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.tag.TagKey;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 
 public class DyeableBlockRegister {
@@ -20,16 +16,12 @@ public class DyeableBlockRegister {
 
     public DyeableBlockRegister(String blockId, Block dyeableBlock) {
         Block = dyeableBlock;
-        Item = new DyeableBlockItem(Block, new FabricItemSettings());
-        OriginalBlocks = TagKey.of(RegistryKeys.BLOCK, new Identifier(SeafoamsDyeableBlocks.MOD_ID, blockId + "_replacable"));
+        Item = new DyeableBlockItem(Block, new FabricItemSettings().group(SeafoamsDyeableBlocks.ITEM_GROUP));
+        OriginalBlocks = TagKey.of(Registry.BLOCK.getKey(), new Identifier(SeafoamsDyeableBlocks.MOD_ID, blockId + "_replacable"));
 
         Identifier id = new Identifier(SeafoamsDyeableBlocks.MOD_ID, blockId);
 
-        Registry.register(Registries.BLOCK, id, Block);
-		Registry.register(Registries.ITEM, id, Item);
-
-        ItemGroupEvents.modifyEntriesEvent(SeafoamsDyeableBlocks.ITEM_GROUP).register(content -> {
-            content.add(Item);
-        });
+        Registry.register(Registry.BLOCK, id, Block);
+		Registry.register(Registry.ITEM, id, Item);
     }
 }

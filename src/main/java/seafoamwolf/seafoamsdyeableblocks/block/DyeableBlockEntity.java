@@ -11,7 +11,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
-import net.minecraft.registry.Registries;
+import net.minecraft.util.registry.Registry;
 
 public class DyeableBlockEntity extends BlockEntity {
     public static final int DEFAULT_COLOR = 16777215;
@@ -22,7 +22,7 @@ public class DyeableBlockEntity extends BlockEntity {
 	public DyeableBlockEntity(BlockPos pos, BlockState state) {
 		super(DyeableBlocks.DYEABLE_BLOCK_ENTITY, pos, state);
 		this.color = DEFAULT_COLOR;
-		this.originalBlockId = Registries.BLOCK.getId(state.getBlock()).toString();
+		this.originalBlockId = Registry.BLOCK.getId(state.getBlock()).toString();
 	}
 
 	public int getColor() {
@@ -38,14 +38,14 @@ public class DyeableBlockEntity extends BlockEntity {
 
 	// Original Block for Drops
 	public void setOriginalBlock(Block block) {
-		originalBlockId = Registries.BLOCK.getId(block).toString();
+		originalBlockId = Registry.BLOCK.getId(block).toString();
 	}
 
 	public Block getOriginalBlock() {
 		if (originalBlockId == "")
 			return null;
 		
-		return Registries.BLOCK.get(new Identifier(originalBlockId));
+		return Registry.BLOCK.get(new Identifier(originalBlockId));
 	}
 
 	// Serialize the BlockEntity

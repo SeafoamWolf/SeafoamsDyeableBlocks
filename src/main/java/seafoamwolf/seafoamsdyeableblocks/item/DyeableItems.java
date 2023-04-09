@@ -4,12 +4,10 @@ import java.util.List;
 import java.util.ArrayList;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 
 import net.minecraft.block.cauldron.CauldronBehavior;
 import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.Identifier;
 import seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks;
 
@@ -23,31 +21,25 @@ public class DyeableItems {
     public static void register() {
         // NORMAL ITEMS
 
-        COLOR_ESSENCE = Registry.register(Registries.ITEM,
+        COLOR_ESSENCE = Registry.register(Registry.ITEM,
             new Identifier(SeafoamsDyeableBlocks.MOD_ID, "color_essence"),
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().group(SeafoamsDyeableBlocks.ITEM_GROUP)));
         
         // DYEABLE
 
-        PAINTBRUSH = Registry.register(Registries.ITEM,
+        PAINTBRUSH = Registry.register(Registry.ITEM,
             new Identifier(SeafoamsDyeableBlocks.MOD_ID, "paintbrush"),
-            new PaintbrushItem(new FabricItemSettings().maxDamage(256), "paintbrush"));
+            new PaintbrushItem(new FabricItemSettings().maxDamage(256).group(SeafoamsDyeableBlocks.ITEM_GROUP), "paintbrush"));
 
-        NETHERITE_PAINTBRUSH = Registry.register(Registries.ITEM,
+        NETHERITE_PAINTBRUSH = Registry.register(Registry.ITEM,
             new Identifier(SeafoamsDyeableBlocks.MOD_ID, "netherite_paintbrush"),
-            new PaintbrushItem(new FabricItemSettings().maxDamage(2048), "netherite_paintbrush"));
+            new PaintbrushItem(new FabricItemSettings().maxDamage(2048).group(SeafoamsDyeableBlocks.ITEM_GROUP), "netherite_paintbrush"));
 
         dyeable.add(PAINTBRUSH);
         dyeable.add(NETHERITE_PAINTBRUSH);
         
         CauldronBehavior.WATER_CAULDRON_BEHAVIOR.put(PAINTBRUSH, CauldronBehavior.CLEAN_DYEABLE_ITEM);
         CauldronBehavior.WATER_CAULDRON_BEHAVIOR.put(NETHERITE_PAINTBRUSH, CauldronBehavior.CLEAN_DYEABLE_ITEM);
-
-        ItemGroupEvents.modifyEntriesEvent(SeafoamsDyeableBlocks.ITEM_GROUP).register(content -> {
-            content.add(COLOR_ESSENCE);
-            content.add(PAINTBRUSH);
-            content.add(NETHERITE_PAINTBRUSH);
-        });
     }
 
 	public static List<Item> GetDyeable() {
