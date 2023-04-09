@@ -4,7 +4,7 @@ modLoader="javafml"
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
 # Forge for 1.19 is version 41
 
-loaderVersion="[41,)"
+loaderVersion="[45,)"
 license="MIT"
 issueTrackerURL="https://github.com/SeafoamWolf/SeafoamsDyeableBlocks/issues"
 showAsResourcePack=false
@@ -22,13 +22,13 @@ showAsResourcePack=false
   [[dependencies.seafoamsdyeableblocks]]
     modId="forge"
     mandatory=true
-    versionRange="[41,)"
+    versionRange="[45,)"
     ordering="NONE"
     side="BOTH"
 
   [[dependencies.seafoamsdyeableblocks]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19,1.20)"
+    versionRange="[1.19.4,1.20)"
     ordering="NONE"
     side="BOTH"

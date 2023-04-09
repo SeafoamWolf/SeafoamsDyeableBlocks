@@ -15,7 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks;
 import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlockEntity;
 import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlockInterface;
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 
 public class PaintbrushItem extends DyedItem {
@@ -47,7 +47,7 @@ public class PaintbrushItem extends DyedItem {
 
 		if (!player.isCrouching()) {
 			for (Block dyeableBlock : SeafoamsDyeableBlocks.DYEABLE_BLOCKS) {
-				TagKey<Block> resourceLocation = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(ForgeRegistries.BLOCKS.getKey(blockAt) + "_replacable"));
+				TagKey<Block> resourceLocation = TagKey.create(Registries.BLOCK, new ResourceLocation(ForgeRegistries.BLOCKS.getKey(blockAt) + "_replacable"));
 
 				if (!blockStateAt.is(resourceLocation))
 					continue;
