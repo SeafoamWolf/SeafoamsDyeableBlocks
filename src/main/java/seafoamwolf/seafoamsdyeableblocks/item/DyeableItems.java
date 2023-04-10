@@ -17,7 +17,8 @@ public class DyeableItems {
 	private static List<Item> dyeable = new ArrayList<Item>();
 
     public static Item COLOR_ESSENCE;
-    public static DynamicDyeItem DYNAMIC_DYE;
+    public static PaintbrushItem PAINTBRUSH;
+    public static PaintbrushItem NETHERITE_PAINTBRUSH;
 
     public static void register() {
         // NORMAL ITEMS
@@ -28,17 +29,24 @@ public class DyeableItems {
         
         // DYEABLE
 
-        DYNAMIC_DYE = Registry.register(Registries.ITEM,
-            new Identifier(SeafoamsDyeableBlocks.MOD_ID, "dynamic_dye"),
-            new DynamicDyeItem(new FabricItemSettings().maxDamage(1024), "dynamic_dye"));
+        PAINTBRUSH = Registry.register(Registries.ITEM,
+            new Identifier(SeafoamsDyeableBlocks.MOD_ID, "paintbrush"),
+            new PaintbrushItem(new FabricItemSettings().maxDamage(256), "paintbrush"));
 
-        dyeable.add(DYNAMIC_DYE);
+        NETHERITE_PAINTBRUSH = Registry.register(Registries.ITEM,
+            new Identifier(SeafoamsDyeableBlocks.MOD_ID, "netherite_paintbrush"),
+            new PaintbrushItem(new FabricItemSettings().maxDamage(2048), "netherite_paintbrush"));
+
+        dyeable.add(PAINTBRUSH);
+        dyeable.add(NETHERITE_PAINTBRUSH);
         
-        CauldronBehavior.WATER_CAULDRON_BEHAVIOR.put(DYNAMIC_DYE, CauldronBehavior.CLEAN_DYEABLE_ITEM);
+        CauldronBehavior.WATER_CAULDRON_BEHAVIOR.put(PAINTBRUSH, CauldronBehavior.CLEAN_DYEABLE_ITEM);
+        CauldronBehavior.WATER_CAULDRON_BEHAVIOR.put(NETHERITE_PAINTBRUSH, CauldronBehavior.CLEAN_DYEABLE_ITEM);
 
         ItemGroupEvents.modifyEntriesEvent(SeafoamsDyeableBlocks.ITEM_GROUP).register(content -> {
             content.add(COLOR_ESSENCE);
-            content.add(DYNAMIC_DYE);
+            content.add(PAINTBRUSH);
+            content.add(NETHERITE_PAINTBRUSH);
         });
     }
 

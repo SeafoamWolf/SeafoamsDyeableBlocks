@@ -21,6 +21,7 @@ public class SeafoamsDyeableBlocks implements ModInitializer {
 	public void onInitialize() {
 		DyeableBlocks.register();
 		DyeableItems.register();
+		
 		DyeableCommands.register();
 	}
 }

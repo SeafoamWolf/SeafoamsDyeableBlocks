@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "seafoamsdyeableblocks:paintbrush"
+  },
+  "result": {
+    "item": "seafoamsdyeableblocks:netherite_paintbrush"
+  }
+}

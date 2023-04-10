@@ -5,7 +5,7 @@
   "version": "${version}",
 
   "name": "Seafoam's Dyeable Blocks",
-  "description": "A cosmetic mod adding in multiple dyeable blocks for decoration and pixel art.",
+  "description": "Adds full RGB dye support to some blocks for decoration or art! A pixel artist's dream! Works great for Vanilla+!",
   
   "authors": [
     "SeafoamWolf"
@@ -34,7 +34,7 @@
   },
 
   "depends": {
-    "fabricloader": ">=0.14.14",
+    "fabricloader": ">=0.14.19",
     "fabric": "*",
 		"fabric-api": "*",
     "minecraft": "1.19.4",
