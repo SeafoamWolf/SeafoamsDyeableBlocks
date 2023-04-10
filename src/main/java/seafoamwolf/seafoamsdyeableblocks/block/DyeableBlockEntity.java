@@ -2,7 +2,6 @@ package seafoamwolf.seafoamsdyeableblocks.block;
 
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.event.GameEvent;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -32,7 +31,7 @@ public class DyeableBlockEntity extends BlockEntity {
 	public void setColor(int newColor, LivingEntity user) {
 		this.color = newColor;
 		
-		this.world.emitGameEvent(GameEvent.BLOCK_CHANGE, this.getPos(), GameEvent.Emitter.of(user, this.getCachedState()));
+		//this.world.emitGameEvent(GameEvent.BLOCK_CHANGE, this.getPos(), GameEvent.Emitter.of(user, this.getCachedState()));
 		this.updateListeners();
 	}
 

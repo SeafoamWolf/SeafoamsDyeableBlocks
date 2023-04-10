@@ -43,7 +43,7 @@ public class DyeableStairsBlock extends StairsBlock implements DyeableBlockInter
             }
 
             dropStack(world, pos, droppedStack);
-            state.onStacksDropped((ServerWorld)world, pos, stack2, false);
+            state.onStacksDropped((ServerWorld)world, pos, stack2);
         }
     }
 
@@ -56,7 +56,7 @@ public class DyeableStairsBlock extends StairsBlock implements DyeableBlockInter
         ItemStack droppedStack = getItemStack(state, world, pos, blockEntity, player, stack);
         
         dropStack(world, pos, droppedStack);
-        state.onStacksDropped((ServerWorld)world, pos, stack, false);
+        state.onStacksDropped((ServerWorld)world, pos, stack);
     }
 
 	@Override

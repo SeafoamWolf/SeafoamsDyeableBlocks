@@ -1,5 +1,6 @@
 {
   "parent": "seafoamsdyeableblocks:block/dyeable_bars_cap_alt",
+  "render_type": "cutout_mipped",
   "textures": {
     "bars": "seafoamsdyeableblocks:block/dyeable_iron_bars",
     "edge": "seafoamsdyeableblocks:block/dyeable_iron_bars"

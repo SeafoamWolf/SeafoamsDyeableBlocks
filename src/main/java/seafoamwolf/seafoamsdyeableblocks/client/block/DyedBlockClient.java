@@ -2,12 +2,14 @@ package seafoamwolf.seafoamsdyeableblocks.client.block;
 
 import java.util.List;
 
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.client.render.RenderLayer;
+
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.rendering.v1.*;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.client.render.RenderLayer;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+
 import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlockEntity;
 import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlockRegister;
 import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlocks;

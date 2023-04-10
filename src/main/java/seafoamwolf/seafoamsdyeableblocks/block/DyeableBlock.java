@@ -42,7 +42,7 @@ public class DyeableBlock extends Block implements DyeableBlockInterface {
             }
 
             dropStack(world, pos, droppedStack);
-            state.onStacksDropped((ServerWorld)world, pos, stack2, false);
+            state.onStacksDropped((ServerWorld)world, pos, stack2);
         }
     }
 
@@ -55,7 +55,7 @@ public class DyeableBlock extends Block implements DyeableBlockInterface {
         ItemStack droppedStack = getItemStack(state, world, pos, blockEntity, player, stack);
         
         dropStack(world, pos, droppedStack);
-        state.onStacksDropped((ServerWorld)world, pos, stack, false);
+        state.onStacksDropped((ServerWorld)world, pos, stack);
     }
 
 	@Override
