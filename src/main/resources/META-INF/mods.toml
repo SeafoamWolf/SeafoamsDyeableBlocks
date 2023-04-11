@@ -11,7 +11,7 @@ showAsResourcePack=false
 
 [[mods]]
   modId="seafoamsdyeableblocks"
-  version="1.3.0"
+  version="1.3.1"
   displayName="Seafoam's Dyeable Blocks"
   logoFile="logo.png"
   authors="SeafoamWolf"
