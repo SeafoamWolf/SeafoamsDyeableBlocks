@@ -47,8 +47,10 @@ public class PaintbrushItem extends DyedItem {
 
 		if (!player.isCrouching()) {
 			for (Block dyeableBlock : SeafoamsDyeableBlocks.DYEABLE_BLOCKS) {
-				TagKey<Block> resourceLocation = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(ForgeRegistries.BLOCKS.getKey(blockAt) + "_replacable"));
+				TagKey<Block> resourceLocation = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(ForgeRegistries.BLOCKS.getKey(dyeableBlock) + "_replacable"));
 
+				System.out.println(ForgeRegistries.BLOCKS.getKey(dyeableBlock) + "_replacable");
+				
 				if (!blockStateAt.is(resourceLocation))
 					continue;
 
