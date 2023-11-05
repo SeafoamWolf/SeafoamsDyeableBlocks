@@ -1,10 +1,10 @@
-package seafoamwolf.seafoamsdyeableblocks.commands;
+package seafoamwolf.seafoamsdyeableblocks.fabric.commands;
 
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.command.ServerCommandSource;
-import seafoamwolf.seafoamsdyeableblocks.item.DyeableItems;
-import seafoamwolf.seafoamsdyeableblocks.item.PaintbrushItem;
+import seafoamwolf.seafoamsdyeableblocks.fabric.item.DyeableItems;
+import seafoamwolf.seafoamsdyeableblocks.fabric.item.PaintbrushItem;
 
 import static com.mojang.brigadier.arguments.IntegerArgumentType.getInteger;
 import static net.minecraft.server.command.CommandManager.literal;

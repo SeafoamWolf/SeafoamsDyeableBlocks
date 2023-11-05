@@ -1,4 +1,4 @@
-package seafoamwolf.seafoamsdyeableblocks.item;
+package seafoamwolf.seafoamsdyeableblocks.fabric.item;
 
 import java.util.List;
 

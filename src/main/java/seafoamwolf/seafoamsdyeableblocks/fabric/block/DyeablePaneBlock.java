@@ -1,18 +1,17 @@
-package seafoamwolf.seafoamsdyeableblocks.block;
+package seafoamwolf.seafoamsdyeableblocks.fabric.block;
 
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.StainedGlassBlock;
+import net.minecraft.block.PaneBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.BlockView;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.DyeColor;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.entity.Entity;
@@ -20,9 +19,9 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 
-public class DyeableStainedGlassBlock extends StainedGlassBlock implements DyeableBlockInterface {
-    public DyeableStainedGlassBlock(AbstractBlock.Settings settings) {
-        super(DyeColor.WHITE, settings);
+public class DyeablePaneBlock extends PaneBlock implements DyeableBlockInterface {
+    public DyeablePaneBlock(AbstractBlock.Settings settings) {
+        super(settings);
     }
 
     public void onPlaced(World world, BlockPos pos, BlockState blockState, LivingEntity entity, ItemStack item) {

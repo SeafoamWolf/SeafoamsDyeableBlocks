@@ -1,4 +1,4 @@
-package seafoamwolf.seafoamsdyeableblocks.client.item;
+package seafoamwolf.seafoamsdyeableblocks.fabric.client.item;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.rendering.v1.*;
 import net.minecraft.item.Item;
-import seafoamwolf.seafoamsdyeableblocks.item.DyeableItems;
-import seafoamwolf.seafoamsdyeableblocks.item.DyedItem;
+import seafoamwolf.seafoamsdyeableblocks.fabric.item.DyeableItems;
+import seafoamwolf.seafoamsdyeableblocks.fabric.item.DyedItem;
 
 @Environment(value=EnvType.CLIENT)
 public class DyedItemClient {

@@ -1,4 +1,4 @@
-package seafoamwolf.seafoamsdyeableblocks.block;
+package seafoamwolf.seafoamsdyeableblocks.fabric.block;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;

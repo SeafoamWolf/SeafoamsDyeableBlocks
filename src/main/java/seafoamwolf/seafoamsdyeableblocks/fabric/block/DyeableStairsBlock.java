@@ -1,4 +1,4 @@
-package seafoamwolf.seafoamsdyeableblocks.block;
+package seafoamwolf.seafoamsdyeableblocks.fabric.block;
 
 import org.jetbrains.annotations.Nullable;
 

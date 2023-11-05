@@ -1,4 +1,4 @@
-package seafoamwolf.seafoamsdyeableblocks.item;
+package seafoamwolf.seafoamsdyeableblocks.fabric.item;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -10,10 +10,10 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlockEntity;
-import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlockInterface;
-import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlockRegister;
-import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlocks;
+import seafoamwolf.seafoamsdyeableblocks.fabric.block.DyeableBlockEntity;
+import seafoamwolf.seafoamsdyeableblocks.fabric.block.DyeableBlockInterface;
+import seafoamwolf.seafoamsdyeableblocks.fabric.block.DyeableBlockRegister;
+import seafoamwolf.seafoamsdyeableblocks.fabric.block.DyeableBlocks;
 
 public class PaintbrushItem extends DyedItem {
 	public PaintbrushItem(Settings settings, String itemId) {

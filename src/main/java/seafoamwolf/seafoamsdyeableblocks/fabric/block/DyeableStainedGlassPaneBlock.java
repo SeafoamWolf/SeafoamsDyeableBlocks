@@ -1,27 +1,29 @@
-package seafoamwolf.seafoamsdyeableblocks.block;
+package seafoamwolf.seafoamsdyeableblocks.fabric.block;
 
 import org.jetbrains.annotations.Nullable;
 
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.StainedGlassPaneBlock;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.BlockView;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.entity.player.PlayerEntity;
-
-import net.minecraft.world.World;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.entity.Entity;
-import net.minecraft.world.BlockView;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 
-public class DyeableBlock extends Block implements DyeableBlockInterface {
-	public DyeableBlock(Settings settings) {
-		super(settings);
-	}
+public class DyeableStainedGlassPaneBlock extends StainedGlassPaneBlock implements DyeableBlockInterface {
+    public DyeableStainedGlassPaneBlock(AbstractBlock.Settings settings) {
+        super(DyeColor.WHITE, settings);
+    }
 
     public void onPlaced(World world, BlockPos pos, BlockState blockState, LivingEntity entity, ItemStack item) {
         dyedOnPlaced(world, pos, blockState, entity, item);

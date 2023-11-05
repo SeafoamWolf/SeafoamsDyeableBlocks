@@ -1,4 +1,4 @@
-package seafoamwolf.seafoamsdyeableblocks.block;
+package seafoamwolf.seafoamsdyeableblocks.fabric.block;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks;
+import seafoamwolf.seafoamsdyeableblocks.fabric.SeafoamsDyeableBlocks;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 

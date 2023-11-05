@@ -1,4 +1,4 @@
-package seafoamwolf.seafoamsdyeableblocks.block;
+package seafoamwolf.seafoamsdyeableblocks.fabric.block;
 
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;

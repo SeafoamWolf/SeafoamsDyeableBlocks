@@ -1,8 +1,8 @@
-package seafoamwolf.seafoamsdyeableblocks.block;
+package seafoamwolf.seafoamsdyeableblocks.fabric.block;
 
 import net.minecraft.util.Identifier;
-import seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks;
-import seafoamwolf.seafoamsdyeableblocks.item.DyeableBlockItem;
+import seafoamwolf.seafoamsdyeableblocks.fabric.SeafoamsDyeableBlocks;
+import seafoamwolf.seafoamsdyeableblocks.fabric.item.DyeableBlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKeys;
@@ -28,7 +28,7 @@ public class DyeableBlockRegister {
         Registry.register(Registries.BLOCK, id, Block);
 		Registry.register(Registries.ITEM, id, Item);
 
-        ItemGroupEvents.modifyEntriesEvent(SeafoamsDyeableBlocks.ITEM_GROUP).register(content -> {
+        ItemGroupEvents.modifyEntriesEvent(SeafoamsDyeableBlocks.ITEM_GROUP_KEY).register(content -> {
             content.add(Item);
         });
     }

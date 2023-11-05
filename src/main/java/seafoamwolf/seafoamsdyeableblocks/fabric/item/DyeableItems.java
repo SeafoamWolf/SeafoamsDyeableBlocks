@@ -1,4 +1,4 @@
-package seafoamwolf.seafoamsdyeableblocks.item;
+package seafoamwolf.seafoamsdyeableblocks.fabric.item;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks;
+import seafoamwolf.seafoamsdyeableblocks.fabric.SeafoamsDyeableBlocks;
 
 public class DyeableItems {
 	private static List<Item> dyeable = new ArrayList<Item>();
@@ -43,7 +43,7 @@ public class DyeableItems {
         CauldronBehavior.WATER_CAULDRON_BEHAVIOR.put(PAINTBRUSH, CauldronBehavior.CLEAN_DYEABLE_ITEM);
         CauldronBehavior.WATER_CAULDRON_BEHAVIOR.put(NETHERITE_PAINTBRUSH, CauldronBehavior.CLEAN_DYEABLE_ITEM);
 
-        ItemGroupEvents.modifyEntriesEvent(SeafoamsDyeableBlocks.ITEM_GROUP).register(content -> {
+        ItemGroupEvents.modifyEntriesEvent(SeafoamsDyeableBlocks.ITEM_GROUP_KEY).register(content -> {
             content.add(COLOR_ESSENCE);
             content.add(PAINTBRUSH);
             content.add(NETHERITE_PAINTBRUSH);

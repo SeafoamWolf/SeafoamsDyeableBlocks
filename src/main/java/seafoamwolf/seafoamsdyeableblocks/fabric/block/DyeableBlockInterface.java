@@ -1,4 +1,4 @@
-package seafoamwolf.seafoamsdyeableblocks.block;
+package seafoamwolf.seafoamsdyeableblocks.fabric.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockEntityProvider;
@@ -12,8 +12,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.stat.Stats;
 
 import net.minecraft.world.World;
-import seafoamwolf.seafoamsdyeableblocks.item.DyeableBlockItem;
-import seafoamwolf.seafoamsdyeableblocks.item.PaintbrushItem;
+import seafoamwolf.seafoamsdyeableblocks.fabric.item.DyeableBlockItem;
+import seafoamwolf.seafoamsdyeableblocks.fabric.item.PaintbrushItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
