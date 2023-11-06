@@ -1,34 +1,34 @@
-package seafoamwolf.seafoamsdyeableblocks.block;
+package seafoamwolf.seafoamsdyeableblocks.forge.block;
 
 import javax.annotation.Nullable;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.StainedGlassBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks;
+import seafoamwolf.seafoamsdyeableblocks.forge.SeafoamsDyeableBlocks;
 
-public class DyeableBlock extends Block implements DyeableBlockInterface {
-    public static TagKey<Block> OriginalBlocks;
-
-	public DyeableBlock(BlockBehaviour.Properties settings) {
-		super(settings);
+public class DyeableStainedGlassBlock extends StainedGlassBlock implements DyeableBlockInterface {
+	public DyeableStainedGlassBlock(BlockBehaviour.Properties settings) {
+		super(DyeColor.WHITE, settings);
         
         SeafoamsDyeableBlocks.DYEABLE_BLOCKS.add(this);
 	}
-
+	
+	@Nullable
 	@Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return dyedCreateBlockEntity(pos, state);
@@ -42,7 +42,7 @@ public class DyeableBlock extends Block implements DyeableBlockInterface {
 	public static void dropResources(BlockState state, Level level, BlockPos pos, @Nullable BlockEntity blockEntity, Entity entity, ItemStack stack2) {
 		if (level instanceof ServerLevel) {
             DyeableBlockEntity dyeableBlockEntity = (DyeableBlockEntity)blockEntity;
-            
+
             if (dyeableBlockEntity == null)
                 return;
             

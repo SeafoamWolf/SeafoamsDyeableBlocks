@@ -1,4 +1,4 @@
-package seafoamwolf.seafoamsdyeableblocks.block;
+package seafoamwolf.seafoamsdyeableblocks.forge.block;
 
 import javax.annotation.Nullable;
 
@@ -13,15 +13,15 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.IronBarsBlock;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks;
+import seafoamwolf.seafoamsdyeableblocks.forge.SeafoamsDyeableBlocks;
 
-public class DyeablePaneBlock extends IronBarsBlock implements DyeableBlockInterface {
-	public DyeablePaneBlock(BlockBehaviour.Properties settings) {
+public class DyeableSlabBlock extends SlabBlock implements DyeableBlockInterface {
+	public DyeableSlabBlock(BlockBehaviour.Properties settings) {
 		super(settings);
         
         SeafoamsDyeableBlocks.DYEABLE_BLOCKS.add(this);

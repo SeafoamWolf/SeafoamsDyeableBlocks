@@ -1,4 +1,4 @@
-package seafoamwolf.seafoamsdyeableblocks.item;
+package seafoamwolf.seafoamsdyeableblocks.forge.item;
 
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.BlockItem;

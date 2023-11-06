@@ -1,4 +1,4 @@
-package seafoamwolf.seafoamsdyeableblocks.item;
+package seafoamwolf.seafoamsdyeableblocks.forge.item;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
@@ -12,9 +12,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.registries.ForgeRegistries;
-import seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks;
-import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlockEntity;
-import seafoamwolf.seafoamsdyeableblocks.block.DyeableBlockInterface;
+import seafoamwolf.seafoamsdyeableblocks.forge.SeafoamsDyeableBlocks;
+import seafoamwolf.seafoamsdyeableblocks.forge.block.DyeableBlockEntity;
+import seafoamwolf.seafoamsdyeableblocks.forge.block.DyeableBlockInterface;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 

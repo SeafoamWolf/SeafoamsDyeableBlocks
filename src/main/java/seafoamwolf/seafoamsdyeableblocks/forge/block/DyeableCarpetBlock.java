@@ -1,4 +1,4 @@
-package seafoamwolf.seafoamsdyeableblocks.block;
+package seafoamwolf.seafoamsdyeableblocks.forge.block;
 
 import javax.annotation.Nullable;
 
@@ -13,16 +13,16 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.CarpetBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks;
+import seafoamwolf.seafoamsdyeableblocks.forge.SeafoamsDyeableBlocks;
 
-public class DyeableStairBlock extends StairBlock implements DyeableBlockInterface {
-	public DyeableStairBlock(BlockState defaultState, BlockBehaviour.Properties settings) {
-		super(() -> defaultState, settings);
+public class DyeableCarpetBlock extends CarpetBlock implements DyeableBlockInterface {
+	public DyeableCarpetBlock(BlockBehaviour.Properties settings) {
+		super(settings);
         
         SeafoamsDyeableBlocks.DYEABLE_BLOCKS.add(this);
 	}
@@ -44,7 +44,7 @@ public class DyeableStairBlock extends StairBlock implements DyeableBlockInterfa
 
             if (dyeableBlockEntity == null)
                 return;
-            
+
             Block droppedBlock = dyeableBlockEntity.getOriginalBlock();
             ItemStack droppedStack;
 

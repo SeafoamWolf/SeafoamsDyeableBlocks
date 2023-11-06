@@ -1,4 +1,4 @@
-package seafoamwolf.seafoamsdyeableblocks.block;
+package seafoamwolf.seafoamsdyeableblocks.forge.block;
 
 import javax.annotation.Nullable;
 
@@ -16,8 +16,8 @@ import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import seafoamwolf.seafoamsdyeableblocks.item.DyeableBlockItem;
-import seafoamwolf.seafoamsdyeableblocks.item.PaintbrushItem;
+import seafoamwolf.seafoamsdyeableblocks.forge.item.DyeableBlockItem;
+import seafoamwolf.seafoamsdyeableblocks.forge.item.PaintbrushItem;
 
 public interface DyeableBlockInterface extends EntityBlock {
 	default public void dyedSetPlacedBy(Level world, BlockPos pos, BlockState blockState, @Nullable LivingEntity entity, ItemStack itemStack) {
