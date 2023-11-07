@@ -58,8 +58,10 @@ public class PaintbrushItem extends DyedItem {
 
 				BlockEntity entity = world.getBlockEntity(pos);
 
-				if (entity != null && entity instanceof DyeableBlockEntity)
+				if (entity != null && entity instanceof DyeableBlockEntity) {
 					((DyeableBlockEntity)entity).setColor(dyeColor);
+					((DyeableBlockEntity)entity).setOriginalBlock(blockAt);
+				}
 
 				if (!player.isCreative())
 					handItem.setDamageValue(handItem.getDamageValue() + 1);

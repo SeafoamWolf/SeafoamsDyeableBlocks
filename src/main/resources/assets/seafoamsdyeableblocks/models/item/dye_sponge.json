@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecraft:block/white_stained_glass"
+    "layer0": "seafoamsdyeableblocks:item/dye_sponge"
   }
 }

@@ -21,7 +21,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
-import net.minecraftforge.registries.RegistryObject;
 import seafoamwolf.seafoamsdyeableblocks.forge.block.DyeableBlocks;
 import seafoamwolf.seafoamsdyeableblocks.forge.item.DyeableItems;
 import seafoamwolf.seafoamsdyeableblocks.forge.block.DyeableBlockEntity;
@@ -75,6 +74,9 @@ public class SeafoamsDyeableBlocks {
                 output.accept(new ItemStack(DyeableBlocks.DYEABLE_PLANK_STAIRS.get()));
                 output.accept(new ItemStack(DyeableBlocks.DYEABLE_PLANK_SLAB.get()));
 
+                output.accept(new ItemStack(DyeableBlocks.DYEABLE_STRIPPED_LOG.get()));
+                output.accept(new ItemStack(DyeableBlocks.DYEABLE_STRIPPED_WOOD.get()));
+
                 output.accept(new ItemStack(DyeableBlocks.DYEABLE_GLOWSTONE.get()));
                 output.accept(new ItemStack(DyeableBlocks.DYEABLE_IRON_BARS.get()));
 
@@ -84,6 +86,7 @@ public class SeafoamsDyeableBlocks {
                 output.accept(new ItemStack(DyeableItems.COLOR_ESSENCE.get()));
                 output.accept(new ItemStack(DyeableItems.PAINTBRUSH.get()));
                 output.accept(new ItemStack(DyeableItems.NETHERITE_PAINTBRUSH.get()));
+                output.accept(new ItemStack(DyeableItems.DYE_SPONGE.get()));
             }).build());
     }
 

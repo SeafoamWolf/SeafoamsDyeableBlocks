@@ -79,6 +79,11 @@ public class DyeableBlocks {
 	public static final RegistryObject<DyeableStainedGlassPaneBlock> DYEABLE_STAINED_GLASS_PANE = DyeableBlocks.BLOCKS.register("dyeable_stained_glass_pane", () ->
 		new DyeableStainedGlassPaneBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_STAINED_GLASS_PANE)));
 
+	public static final RegistryObject<DyeablePillarBlock> DYEABLE_STRIPPED_LOG = DyeableBlocks.BLOCKS.register("dyeable_stripped_log", () ->
+		new DyeablePillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+	
+	public static final RegistryObject<DyeablePillarBlock> DYEABLE_STRIPPED_WOOD = DyeableBlocks.BLOCKS.register("dyeable_stripped_wood", () ->
+		new DyeablePillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 	
 	public static final RegistryObject<BlockEntityType<DyeableBlockEntity>> DYEABLE_BLOCK_ENTITY = BLOCK_ENTITY_TYPES.register("dyeable_block_entity", () -> BlockEntityType.Builder.of(DyeableBlockEntity::new,
 		DYEABLE_CONCRETE.get(), DYEABLE_CONCRETE_STAIRS.get(), DYEABLE_CONCRETE_SLAB.get(),
@@ -86,6 +91,7 @@ public class DyeableBlocks {
 		DYEABLE_BRICKS.get(), DYEABLE_BRICK_STAIRS.get(), DYEABLE_BRICK_SLAB.get(),
 		DYEABLE_TERRACOTTA.get(), DYEABLE_TERRACOTTA_STAIRS.get(), DYEABLE_TERRACOTTA_SLAB.get(),
 		DYEABLE_PLANKS.get(), DYEABLE_PLANK_STAIRS.get(), DYEABLE_PLANK_SLAB.get(),
+		DYEABLE_STRIPPED_LOG.get(), DYEABLE_STRIPPED_WOOD.get(),
 		DYEABLE_GLOWSTONE.get(), DYEABLE_IRON_BARS.get(),
 		DYEABLE_STAINED_GLASS.get(), DYEABLE_STAINED_GLASS_PANE.get()
 	).build(null));

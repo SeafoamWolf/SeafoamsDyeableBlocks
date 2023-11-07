@@ -1,6 +1,7 @@
 {
   "item_group.seafoamsdyeableblocks.item_tab": "Seafoam's Dyeable Blocks",
-
+  "itemGroup.seafoamsdyeableblocks.item_group": "Seafoam's Dyeable Blocks",
+  
   "item.seafoamsdyeableblocks.color_essence": "Color Essence",
 
   "item.seafoamsdyeableblocks.paintbrush": "Paintbrush",
@@ -9,6 +10,9 @@
   "item.seafoamsdyeableblocks.netherite_paintbrush": "Netherite Paintbrush",
   "item.seafoamsdyeableblocks.netherite_paintbrush.tooltip0": "Dye and use on blocks to color them",
   "item.seafoamsdyeableblocks.netherite_paintbrush.tooltip1": "Sneak interact a block to pick its color",
+
+  "item.seafoamsdyeableblocks.dye_sponge": "Dye Sponge",
+  "item.seafoamsdyeableblocks.dye_sponge.tooltip0": "Interact with a dyed block to revert it to normal",
 
   "block.seafoamsdyeableblocks.dyeable_concrete": "Dyed Concrete",
   "block.seafoamsdyeableblocks.dyeable_concrete_stairs": "Dyed Concrete Stairs",
@@ -33,6 +37,9 @@
   "block.seafoamsdyeableblocks.dyeable_planks": "Dyed Planks",
   "block.seafoamsdyeableblocks.dyeable_plank_stairs": "Dyed Plank Stairs",
   "block.seafoamsdyeableblocks.dyeable_plank_slab": "Dyed Plank Slab",
+
+  "block.seafoamsdyeableblocks.dyeable_stripped_log": "Dyed Stripped Log",
+  "block.seafoamsdyeableblocks.dyeable_stripped_wood": "Dyed Stripped Wood",
 
   "block.seafoamsdyeableblocks.dyeable_glowstone": "Dyed Glowstone",
   "block.seafoamsdyeableblocks.dyeable_iron_bars": "Dyed Iron Bars"

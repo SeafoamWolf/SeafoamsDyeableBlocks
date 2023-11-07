@@ -1,0 +1,7 @@
+{
+  "parent": "seafoamsdyeableblocks:block/dyeable_cube_column",
+  "textures": {
+    "end": "seafoamsdyeableblocks:block/dyeable_stripped_log",
+    "side": "seafoamsdyeableblocks:block/dyeable_stripped_log"
+  }
+}

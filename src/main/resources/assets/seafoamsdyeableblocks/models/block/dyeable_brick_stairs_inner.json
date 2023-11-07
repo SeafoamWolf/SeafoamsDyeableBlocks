@@ -4,7 +4,6 @@
     "base": "seafoamsdyeableblocks:block/dyeable_bricks",
     "overlay": "seafoamsdyeableblocks:block/dyeable_bricks_overlay"
   },
-  "render_type": "cutout_mipped",
   "elements": [
       {   "from": [ 0, 0, 0 ],
           "to": [ 16, 8, 16 ],

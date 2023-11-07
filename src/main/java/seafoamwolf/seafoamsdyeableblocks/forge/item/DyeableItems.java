@@ -20,6 +20,9 @@ public class DyeableItems {
     public static final RegistryObject<PaintbrushItem> NETHERITE_PAINTBRUSH = ITEMS.register("netherite_paintbrush", () ->
         new PaintbrushItem(new Item.Properties().durability(2048)));
     
+    public static final RegistryObject<DyeSpongeItem> DYE_SPONGE = ITEMS.register("dye_sponge", () ->
+        new DyeSpongeItem(new Item.Properties().durability(256)));
+    
     public static void register() {
         CauldronInteraction.WATER.put(PAINTBRUSH.get(), CauldronInteraction.DYED_ITEM);
         CauldronInteraction.WATER.put(NETHERITE_PAINTBRUSH.get(), CauldronInteraction.DYED_ITEM);
