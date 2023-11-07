@@ -19,6 +19,7 @@ public class DyeableItems {
     public static Item COLOR_ESSENCE;
     public static PaintbrushItem PAINTBRUSH;
     public static PaintbrushItem NETHERITE_PAINTBRUSH;
+    public static DyeSpongeItem DYE_SPONGE;
 
     public static void register() {
         // NORMAL ITEMS
@@ -36,6 +37,10 @@ public class DyeableItems {
         NETHERITE_PAINTBRUSH = Registry.register(Registries.ITEM,
             new Identifier(SeafoamsDyeableBlocks.MOD_ID, "netherite_paintbrush"),
             new PaintbrushItem(new FabricItemSettings().maxDamage(2048), "netherite_paintbrush"));
+        
+        DYE_SPONGE = Registry.register(Registries.ITEM,
+            new Identifier(SeafoamsDyeableBlocks.MOD_ID, "dye_sponge"),
+            new DyeSpongeItem(new FabricItemSettings().maxDamage(256), "dye_sponge"));
 
         dyeable.add(PAINTBRUSH);
         dyeable.add(NETHERITE_PAINTBRUSH);
@@ -47,6 +52,7 @@ public class DyeableItems {
             content.add(COLOR_ESSENCE);
             content.add(PAINTBRUSH);
             content.add(NETHERITE_PAINTBRUSH);
+            content.add(DYE_SPONGE);
         });
     }
 

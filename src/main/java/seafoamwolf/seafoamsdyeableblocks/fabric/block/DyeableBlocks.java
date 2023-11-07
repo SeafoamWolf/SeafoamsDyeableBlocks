@@ -44,6 +44,9 @@ public class DyeableBlocks {
 
 	public static DyeableBlockRegister DYEABLE_STAINED_GLASS;
 	public static DyeableBlockRegister DYEABLE_STAINED_GLASS_PANE;
+
+	public static DyeableBlockRegister DYEABLE_STRIPPED_LOG;
+	public static DyeableBlockRegister DYEABLE_STRIPPED_WOOD;
 	
 	public static void register() {
 		// CONCRETE
@@ -111,6 +114,14 @@ public class DyeableBlocks {
 
 		DYEABLE_PLANK_SLAB = new DyeableBlockRegister("dyeable_plank_slab",
 			new DyeableSlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+
+		// STRIPPED LOGS
+		
+		DYEABLE_STRIPPED_LOG = new DyeableBlockRegister("dyeable_stripped_log",
+			new DyeablePillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG)));
+
+		DYEABLE_STRIPPED_WOOD = new DyeableBlockRegister("dyeable_stripped_wood",
+			new DyeablePillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD)));
 		
 		// Other
 
@@ -147,6 +158,9 @@ public class DyeableBlocks {
 
 		dyeable.add(DYEABLE_STAINED_GLASS);
 		dyeable.add(DYEABLE_STAINED_GLASS_PANE);
+
+		dyeable.add(DYEABLE_STRIPPED_LOG);
+		dyeable.add(DYEABLE_STRIPPED_WOOD);
 		
 		DYEABLE_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE,
 			new Identifier(SeafoamsDyeableBlocks.MOD_ID, "dyeable_block_entity"),
@@ -156,6 +170,7 @@ public class DyeableBlocks {
 			DYEABLE_BRICKS.Block, DYEABLE_BRICK_STAIRS.Block, DYEABLE_BRICK_SLAB.Block,
 			DYEABLE_TERRACOTTA.Block, DYEABLE_TERRACOTTA_STAIRS.Block, DYEABLE_TERRACOTTA_SLAB.Block,
 			DYEABLE_PLANKS.Block, DYEABLE_PLANK_STAIRS.Block, DYEABLE_PLANK_SLAB.Block,
+			DYEABLE_STRIPPED_LOG.Block, DYEABLE_STRIPPED_WOOD.Block,
 			DYEABLE_GLOWSTONE.Block, DYEABLE_IRON_BARS.Block,
 			DYEABLE_STAINED_GLASS.Block, DYEABLE_STAINED_GLASS_PANE.Block
 		).build(null));
