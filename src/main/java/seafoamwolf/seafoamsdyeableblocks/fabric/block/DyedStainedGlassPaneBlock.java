@@ -2,10 +2,11 @@ package seafoamwolf.seafoamsdyeableblocks.fabric.block;
 
 import org.jetbrains.annotations.Nullable;
 
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.StainedGlassBlock;
+import net.minecraft.block.StainedGlassPaneBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -20,10 +21,14 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 
-public class DyeableStainedGlassBlock extends StainedGlassBlock implements DyeableBlockInterface {
-    public DyeableStainedGlassBlock(AbstractBlock.Settings settings) {
+public class DyedStainedGlassPaneBlock extends StainedGlassPaneBlock implements DyedBlockInterface {
+    public DyedStainedGlassPaneBlock(AbstractBlock.Settings settings) {
         super(DyeColor.WHITE, settings);
     }
+    
+    public DyedStainedGlassPaneBlock(Block baseBlock) {
+		super(DyeColor.WHITE, FabricBlockSettings.copyOf(baseBlock));
+	}
 
     public void onPlaced(World world, BlockPos pos, BlockState blockState, LivingEntity entity, ItemStack item) {
         dyedOnPlaced(world, pos, blockState, entity, item);
@@ -32,7 +37,7 @@ public class DyeableStainedGlassBlock extends StainedGlassBlock implements Dyeab
 	
 	public static void dropStacks(BlockState state, World world, BlockPos pos, @Nullable BlockEntity blockEntity, Entity entity, ItemStack stack2) {
         if (world instanceof ServerWorld) {
-            DyeableBlockEntity dyeableBlockEntity = (DyeableBlockEntity)blockEntity;
+            DyedBlockEntity dyeableBlockEntity = (DyedBlockEntity)blockEntity;
             Block droppedBlock = dyeableBlockEntity.getOriginalBlock();
             ItemStack droppedStack;
 

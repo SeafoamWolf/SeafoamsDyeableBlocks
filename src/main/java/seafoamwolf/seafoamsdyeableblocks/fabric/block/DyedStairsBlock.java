@@ -2,6 +2,7 @@ package seafoamwolf.seafoamsdyeableblocks.fabric.block;
 
 import org.jetbrains.annotations.Nullable;
 
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -19,10 +20,14 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 
-public class DyeableStairsBlock extends StairsBlock implements DyeableBlockInterface {
-    public DyeableStairsBlock(BlockState baseBlockState, AbstractBlock.Settings settings) {
+public class DyedStairsBlock extends StairsBlock implements DyedBlockInterface {
+    public DyedStairsBlock(BlockState baseBlockState, AbstractBlock.Settings settings) {
         super(baseBlockState, settings);
     }
+
+    public DyedStairsBlock(Block baseBlock) {
+		super(baseBlock.getDefaultState(), FabricBlockSettings.copyOf(baseBlock));
+	}
 
     public void onPlaced(World world, BlockPos pos, BlockState blockState, LivingEntity entity, ItemStack item) {
         dyedOnPlaced(world, pos, blockState, entity, item);
@@ -31,7 +36,7 @@ public class DyeableStairsBlock extends StairsBlock implements DyeableBlockInter
 	
 	public static void dropStacks(BlockState state, World world, BlockPos pos, @Nullable BlockEntity blockEntity, Entity entity, ItemStack stack2) {
         if (world instanceof ServerWorld) {
-            DyeableBlockEntity dyeableBlockEntity = (DyeableBlockEntity)blockEntity;
+            DyedBlockEntity dyeableBlockEntity = (DyedBlockEntity)blockEntity;
             Block droppedBlock = dyeableBlockEntity.getOriginalBlock();
             ItemStack droppedStack;
 

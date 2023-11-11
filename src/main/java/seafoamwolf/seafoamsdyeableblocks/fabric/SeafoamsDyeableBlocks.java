@@ -10,7 +10,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.text.Text;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
-import seafoamwolf.seafoamsdyeableblocks.fabric.block.DyeableBlocks;
+import seafoamwolf.seafoamsdyeableblocks.fabric.block.DyedBlocks;
 import seafoamwolf.seafoamsdyeableblocks.fabric.commands.DyeableCommands;
 import seafoamwolf.seafoamsdyeableblocks.fabric.item.DyeableItems;
 
@@ -30,7 +30,7 @@ public class SeafoamsDyeableBlocks implements ModInitializer {
 
 		Registry.register(Registries.ITEM_GROUP, ITEM_GROUP_KEY, ITEM_GROUP);
 		
-		DyeableBlocks.register();
+		DyedBlocks.register();
 		DyeableItems.register();
 		
 		DyeableCommands.register();

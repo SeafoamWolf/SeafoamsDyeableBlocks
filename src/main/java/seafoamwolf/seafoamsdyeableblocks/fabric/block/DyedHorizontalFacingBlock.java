@@ -7,11 +7,11 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
 
-public abstract class DyeableHorizontalFacingBlock
-extends DyeableBlock {
+public abstract class DyedHorizontalFacingBlock
+extends DyedBlock {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
-    protected DyeableHorizontalFacingBlock(AbstractBlock.Settings settings) {
+    protected DyedHorizontalFacingBlock(AbstractBlock.Settings settings) {
         super(settings);
     }
 

@@ -23,19 +23,19 @@ import net.minecraft.world.BlockView;
 
 import org.jetbrains.annotations.Nullable;
 
-public interface DyeableBlockInterface extends BlockEntityProvider {
+public interface DyedBlockInterface extends BlockEntityProvider {
 	default public void dyedOnPlaced(World world, BlockPos pos, BlockState blockState, LivingEntity entity, ItemStack itemStack) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 
-		if (blockEntity != null && blockEntity instanceof DyeableBlockEntity)
-            ((DyeableBlockEntity)blockEntity).setColor(((DyeableBlockItem)itemStack.getItem()).getColor(itemStack), entity);
+		if (blockEntity != null && blockEntity instanceof DyedBlockEntity)
+            ((DyedBlockEntity)blockEntity).setColor(((DyeableBlockItem)itemStack.getItem()).getColor(itemStack), entity);
     }
 	
 	default public ItemStack getItemStack(BlockState state, World world, BlockPos pos, @Nullable BlockEntity blockEntity, Entity entity, ItemStack stack2) {
         if (!(world instanceof ServerWorld))
             return null;
         
-        DyeableBlockEntity dyeableBlockEntity = (DyeableBlockEntity)blockEntity;
+        DyedBlockEntity dyeableBlockEntity = (DyedBlockEntity)blockEntity;
         Block droppedBlock = dyeableBlockEntity.getOriginalBlock();
         ItemStack droppedStack;
 
@@ -54,7 +54,7 @@ public interface DyeableBlockInterface extends BlockEntityProvider {
     }
 
 	default public ItemStack dyedGetPickStack(BlockView world, BlockPos pos, BlockState state) {
-		DyeableBlockEntity dyeableBlockEntity = (DyeableBlockEntity)(world.getBlockEntity(pos));
+		DyedBlockEntity dyeableBlockEntity = (DyedBlockEntity)(world.getBlockEntity(pos));
 
 		ItemStack stack = new ItemStack(state.getBlock());
         stack = dyeableBlockEntity.ApplyNBT(stack);
@@ -63,7 +63,7 @@ public interface DyeableBlockInterface extends BlockEntityProvider {
     }
 
     default public BlockEntity dyedCreateBlockEntity(BlockPos pos, BlockState state) {
-        return new DyeableBlockEntity(pos, state);
+        return new DyedBlockEntity(pos, state);
     }
 
     default public ActionResult dyedOnUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
@@ -72,16 +72,16 @@ public interface DyeableBlockInterface extends BlockEntityProvider {
 		if (handItem.getItem() instanceof PaintbrushItem) {
 			BlockEntity entity = world.getBlockEntity(pos);
 
-			if (entity == null || !(entity instanceof DyeableBlockEntity))
+			if (entity == null || !(entity instanceof DyedBlockEntity))
 				return ActionResult.PASS;
 				
 			int dyeColor = ((PaintbrushItem)handItem.getItem()).getColor(handItem);
-			int blockColor = ((DyeableBlockEntity)entity).getColor();
+			int blockColor = ((DyedBlockEntity)entity).getColor();
 
 			if (dyeColor != blockColor) {
 				player.playSound(SoundEvents.ITEM_DYE_USE, 1, 1);
 				
-				((DyeableBlockEntity)entity).setColor(dyeColor, player);
+				((DyedBlockEntity)entity).setColor(dyeColor, player);
 
 				state.updateNeighbors(world, pos, Block.NOTIFY_ALL);
 

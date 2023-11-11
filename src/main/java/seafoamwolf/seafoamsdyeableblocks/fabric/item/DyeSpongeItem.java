@@ -11,7 +11,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import seafoamwolf.seafoamsdyeableblocks.fabric.block.DyeableBlockEntity;
+import seafoamwolf.seafoamsdyeableblocks.fabric.block.DyedBlockEntity;
 
 public class DyeSpongeItem extends TooltippedItem {
 	public DyeSpongeItem(Settings settings, String itemId) {
@@ -32,8 +32,8 @@ public class DyeSpongeItem extends TooltippedItem {
 		if (!player.isSneaking()) {
 			BlockEntity blockEntity = world.getBlockEntity(pos);
 
-			if (blockEntity != null && blockEntity instanceof DyeableBlockEntity) {
-				DyeableBlockEntity dyedBlockEntity = (DyeableBlockEntity)blockEntity;
+			if (blockEntity != null && blockEntity instanceof DyedBlockEntity) {
+				DyedBlockEntity dyedBlockEntity = (DyedBlockEntity)blockEntity;
 
 				BlockState blockStateAt = world.getBlockState(pos);
 				Block originalBlock = dyedBlockEntity.getOriginalBlock();

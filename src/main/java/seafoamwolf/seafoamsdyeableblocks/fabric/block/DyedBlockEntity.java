@@ -13,14 +13,14 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.registry.Registries;
 
-public class DyeableBlockEntity extends BlockEntity {
+public class DyedBlockEntity extends BlockEntity {
     public static final int DEFAULT_COLOR = 16777215;
 
 	private int color;
 	private String originalBlockId;
 
-	public DyeableBlockEntity(BlockPos pos, BlockState state) {
-		super(DyeableBlocks.DYEABLE_BLOCK_ENTITY, pos, state);
+	public DyedBlockEntity(BlockPos pos, BlockState state) {
+		super(DyedBlocks.DYEABLE_BLOCK_ENTITY, pos, state);
 		this.color = DEFAULT_COLOR;
 		this.originalBlockId = Registries.BLOCK.getId(state.getBlock()).toString();
 	}
@@ -71,7 +71,7 @@ public class DyeableBlockEntity extends BlockEntity {
         NbtCompound nbtCompound = new NbtCompound();
         writeNbt(nbtCompound);
 		
-        BlockItem.setBlockEntityNbt(itemStack, DyeableBlocks.DYEABLE_BLOCK_ENTITY, nbtCompound);
+        BlockItem.setBlockEntityNbt(itemStack, DyedBlocks.DYEABLE_BLOCK_ENTITY, nbtCompound);
 
         return itemStack;
     }

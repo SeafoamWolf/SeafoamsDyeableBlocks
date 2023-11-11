@@ -10,10 +10,10 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import seafoamwolf.seafoamsdyeableblocks.fabric.block.DyeableBlockEntity;
-import seafoamwolf.seafoamsdyeableblocks.fabric.block.DyeableBlockInterface;
-import seafoamwolf.seafoamsdyeableblocks.fabric.block.DyeableBlockRegister;
-import seafoamwolf.seafoamsdyeableblocks.fabric.block.DyeableBlocks;
+import seafoamwolf.seafoamsdyeableblocks.fabric.block.DyedBlockEntity;
+import seafoamwolf.seafoamsdyeableblocks.fabric.block.DyedBlockInterface;
+import seafoamwolf.seafoamsdyeableblocks.fabric.block.DyedBlockRegister;
+import seafoamwolf.seafoamsdyeableblocks.fabric.data.DyeableLists;
 
 public class PaintbrushItem extends DyedItem {
 	public PaintbrushItem(Settings settings, String itemId) {
@@ -35,7 +35,7 @@ public class PaintbrushItem extends DyedItem {
 		Block blockAt = blockStateAt.getBlock();
 
 		if (!player.isSneaking()) {
-			for (DyeableBlockRegister dyeableBlock : DyeableBlocks.GetDyeable()) {
+			for (DyedBlockRegister dyeableBlock : DyeableLists.dyeableBlocks) {
 				if (!blockStateAt.isIn(dyeableBlock.OriginalBlocks))
 					continue;
 					
@@ -43,7 +43,7 @@ public class PaintbrushItem extends DyedItem {
 
 				world.setBlockState(pos, dyeableBlock.Block.getStateWithProperties(blockStateAt), Block.FORCE_STATE);
 
-				DyeableBlockEntity blockEntity = (DyeableBlockEntity)world.getBlockEntity(pos);
+				DyedBlockEntity blockEntity = (DyedBlockEntity)world.getBlockEntity(pos);
 
 				blockEntity.setOriginalBlock(blockAt);
 				blockEntity.setColor(dyeColor, player);
@@ -61,13 +61,13 @@ public class PaintbrushItem extends DyedItem {
 		} else if (handItem.getItem() == DyeableItems.NETHERITE_PAINTBRUSH) {
 			int newColor = 0;
 
-			if (blockAt instanceof DyeableBlockInterface) {
+			if (blockAt instanceof DyedBlockInterface) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
 
-				if (blockEntity == null || !(blockEntity instanceof DyeableBlockEntity))
+				if (blockEntity == null || !(blockEntity instanceof DyedBlockEntity))
 					return ActionResult.PASS;
 
-				newColor = ((DyeableBlockEntity)blockEntity).getColor();
+				newColor = ((DyedBlockEntity)blockEntity).getColor();
 			} else {
 				newColor = blockAt.getDefaultMapColor().color;
 			}

@@ -1,62 +1,34 @@
 package seafoamwolf.seafoamsdyeableblocks.fabric.item;
 
-import java.util.List;
-import java.util.ArrayList;
-
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 
-import net.minecraft.block.cauldron.CauldronBehavior;
 import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import seafoamwolf.seafoamsdyeableblocks.fabric.SeafoamsDyeableBlocks;
+import seafoamwolf.seafoamsdyeableblocks.fabric.data.DyeableLists;
+import seafoamwolf.seafoamsdyeableblocks.fabric.registry.ItemRegistry;
 
 public class DyeableItems {
-	private static List<Item> dyeable = new ArrayList<Item>();
-
-    public static Item COLOR_ESSENCE;
-    public static PaintbrushItem PAINTBRUSH;
-    public static PaintbrushItem NETHERITE_PAINTBRUSH;
-    public static DyeSpongeItem DYE_SPONGE;
+    public static Item COLOR_ESSENCE = new Item(new FabricItemSettings());
+    public static PaintbrushItem PAINTBRUSH = new PaintbrushItem(new FabricItemSettings().maxDamage(256), "paintbrush");
+    public static PaintbrushItem NETHERITE_PAINTBRUSH = new PaintbrushItem(new FabricItemSettings().maxDamage(2048), "netherite_paintbrush");
+    public static DyeSpongeItem DYE_SPONGE = new DyeSpongeItem(new FabricItemSettings().maxDamage(256), "dye_sponge");
 
     public static void register() {
-        // NORMAL ITEMS
+        String modid = SeafoamsDyeableBlocks.MOD_ID;
 
-        COLOR_ESSENCE = Registry.register(Registries.ITEM,
-            new Identifier(SeafoamsDyeableBlocks.MOD_ID, "color_essence"),
-            new Item(new FabricItemSettings()));
-        
-        // DYEABLE
+        registerItem(COLOR_ESSENCE, new Identifier(modid, "color_essence"));
+        registerItem(PAINTBRUSH, new Identifier(modid, "paintbrush"));
+        registerItem(NETHERITE_PAINTBRUSH, new Identifier(modid, "netherite_paintbrush"));
+        registerItem(DYE_SPONGE, new Identifier(modid, "dye_sponge"));
 
-        PAINTBRUSH = Registry.register(Registries.ITEM,
-            new Identifier(SeafoamsDyeableBlocks.MOD_ID, "paintbrush"),
-            new PaintbrushItem(new FabricItemSettings().maxDamage(256), "paintbrush"));
-
-        NETHERITE_PAINTBRUSH = Registry.register(Registries.ITEM,
-            new Identifier(SeafoamsDyeableBlocks.MOD_ID, "netherite_paintbrush"),
-            new PaintbrushItem(new FabricItemSettings().maxDamage(2048), "netherite_paintbrush"));
-        
-        DYE_SPONGE = Registry.register(Registries.ITEM,
-            new Identifier(SeafoamsDyeableBlocks.MOD_ID, "dye_sponge"),
-            new DyeSpongeItem(new FabricItemSettings().maxDamage(256), "dye_sponge"));
-
-        dyeable.add(PAINTBRUSH);
-        dyeable.add(NETHERITE_PAINTBRUSH);
-        
-        CauldronBehavior.WATER_CAULDRON_BEHAVIOR.put(PAINTBRUSH, CauldronBehavior.CLEAN_DYEABLE_ITEM);
-        CauldronBehavior.WATER_CAULDRON_BEHAVIOR.put(NETHERITE_PAINTBRUSH, CauldronBehavior.CLEAN_DYEABLE_ITEM);
-
-        ItemGroupEvents.modifyEntriesEvent(SeafoamsDyeableBlocks.ITEM_GROUP_KEY).register(content -> {
-            content.add(COLOR_ESSENCE);
-            content.add(PAINTBRUSH);
-            content.add(NETHERITE_PAINTBRUSH);
-            content.add(DYE_SPONGE);
-        });
+        DyeableLists.registerDyeableItem(PAINTBRUSH);
+        DyeableLists.registerDyeableItem(NETHERITE_PAINTBRUSH);
     }
 
-	public static List<Item> GetDyeable() {
-		return dyeable;
-	}
+    private static void registerItem(Item item, Identifier identifier) {
+        ItemRegistry.registerDefaultItem(identifier, item);
+        ItemGroupEvents.modifyEntriesEvent(SeafoamsDyeableBlocks.ITEM_GROUP_KEY).register(content -> { content.add(item); });
+    }
 }
