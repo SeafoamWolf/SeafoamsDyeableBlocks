@@ -1,11 +1,11 @@
-package net.examplemod.fabric;
+package seafoamwolf.seafoamsdyeableblocks.fabric;
 
-import net.examplemod.fabriclike.ExampleModFabricLike;
+import seafoamwolf.seafoamsdyeableblocks.fabriclike.DyeableBlocksFabricLike;
 import net.fabricmc.api.ModInitializer;
 
-public class ExampleModFabric implements ModInitializer {
+public class DyeableBlocksFabric implements ModInitializer {
     @Override
     public void onInitialize() {
-        ExampleModFabricLike.init();
+        DyeableBlocksFabricLike.init();
     }
 }

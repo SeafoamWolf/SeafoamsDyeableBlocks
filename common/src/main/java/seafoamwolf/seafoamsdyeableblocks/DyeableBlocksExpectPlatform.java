@@ -13,9 +13,9 @@ public class DyeableBlocksExpectPlatform {
      * platform sub-package, with its class suffixed with {@code Impl}.
      * <p>
      * Example:
-     * Expect: net.examplemod.ExampleExpectPlatform#getConfigDirectory()
-     * Actual Fabric: net.examplemod.fabric.ExampleExpectPlatformImpl#getConfigDirectory()
-     * Actual Forge: net.examplemod.forge.ExampleExpectPlatformImpl#getConfigDirectory()
+     * Expect: seafoamwolf.seafoamsdyeableblocks.ExampleExpectPlatform#getConfigDirectory()
+     * Actual Fabric: seafoamwolf.seafoamsdyeableblocks.fabric.ExampleExpectPlatformImpl#getConfigDirectory()
+     * Actual Forge: seafoamwolf.seafoamsdyeableblocks.forge.ExampleExpectPlatformImpl#getConfigDirectory()
      * <p>
      * <a href="https://plugins.jetbrains.com/plugin/16210-architectury">You should also get the IntelliJ plugin to help with @ExpectPlatform.</a>
      */
