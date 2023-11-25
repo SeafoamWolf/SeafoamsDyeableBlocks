@@ -1,0 +1,33 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "seafoamsdyeableblocks"
+version = "${version}"
+displayName = "Seafoam's Dyeable Blocks"
+authors = "SeafoamWolf"
+description = '''Adds full RGB dye support to some blocks for decoration or art! A pixel artist's dream! Works great for Vanilla+!'''
+#logoFile = ""
+
+[[dependencies.seafoamsdyeableblocks]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.seafoamsdyeableblocks]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.seafoamsdyeableblocks]]
+modId = "architectury"
+mandatory = true
+versionRange = "[9.1.12,)"
+ordering = "AFTER"
+side = "BOTH"

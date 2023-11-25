@@ -1,7 +1,0 @@
-{
-  "parent": "seafoamsdyeableblocks:block/template_dyeable_glass_pane_side_alt",
-  "textures": {
-    "edge": "minecraft:block/white_stained_glass_pane_top",
-    "pane": "minecraft:block/white_stained_glass"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "seafoamsdyeableblocks:block/dyeable_stairs",
-  "textures": {
-    "bottom": "minecraft:block/white_terracotta",
-    "side": "minecraft:block/white_terracotta",
-    "top": "minecraft:block/white_terracotta"
-  }
-}

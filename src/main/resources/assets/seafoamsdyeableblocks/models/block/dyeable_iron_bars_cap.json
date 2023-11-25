@@ -1,7 +1,0 @@
-{
-  "parent": "seafoamsdyeableblocks:block/dyeable_bars_cap",
-  "textures": {
-    "bars": "seafoamsdyeableblocks:block/dyeable_iron_bars",
-    "edge": "seafoamsdyeableblocks:block/dyeable_iron_bars"
-  }
-}

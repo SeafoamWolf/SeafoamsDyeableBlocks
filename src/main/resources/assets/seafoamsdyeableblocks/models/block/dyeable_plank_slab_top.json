@@ -1,8 +1,0 @@
-{
-  "parent": "seafoamsdyeableblocks:block/dyeable_slab_top",
-  "textures": {
-    "bottom": "seafoamsdyeableblocks:block/dyeable_planks",
-    "side": "seafoamsdyeableblocks:block/dyeable_planks",
-    "top": "seafoamsdyeableblocks:block/dyeable_planks"
-  }
-}

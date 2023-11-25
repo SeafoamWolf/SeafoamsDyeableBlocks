@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "${group}",
+    "id": "seafoamsdyeableblocks",
+    "version": "${version}",
+    "metadata": {
+      "name": "Seafoam's Dyeable Blocks",
+      "description": "Adds full RGB dye support to some blocks for decoration or art! A pixel artist's dream! Works great for Vanilla+!",
+      "contributors": {
+        "SeafoamWolf": "Creator"
+      },
+      "contact": {
+        "twitter": "https://twitter.com/SeafoamWolf_",
+        "curseforge": "https://www.curseforge.com/minecraft/mc-mods/seafoams-dyeable-blocks",
+        "modrinth": "https://modrinth.com/mod/seafoams-dyeable-blocks",
+        "sources": "https://github.com/SeafoamWolf/SeafoamsDyeableBlocks",
+        "wiki": "https://github.com/SeafoamWolf/SeafoamsDyeableBlocks/wiki"
+      },
+      "icon": "assets/seafoamsdyeableblocks/icon.png"
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "entrypoints": {
+      "init": [
+        "seafoamwolf.seafoamsdyeableblocks.quilt.SeafoamsDyeableBlocks"
+      ]
+    },
+    "depends": [
+      {
+        "id": "quilt_loader",
+        "version": "*"
+      },
+      {
+        "id": "quilt_base",
+        "version": "*"
+      },
+      {
+        "id": "minecraft",
+        "version": ">=1.20.1"
+      },
+      {
+        "id": "architectury",
+        "version": ">=9.1.12"
+      }
+    ]
+  },
+  "minecraft": {
+    "environment": "*"
+  }
+}
