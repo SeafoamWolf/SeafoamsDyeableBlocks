@@ -1,9 +1,9 @@
 package seafoamwolf.seafoamsdyeableblocks.fabriclike;
 
-import seafoamwolf.seafoamsdyeableblocks.DyeableBlocks;
+import seafoamwolf.seafoamsdyeableblocks.SeafoamsDyeableBlocks;
 
 public class DyeableBlocksFabricLike {
     public static void init() {
-        DyeableBlocks.init();
+        SeafoamsDyeableBlocks.init();
     }
 }

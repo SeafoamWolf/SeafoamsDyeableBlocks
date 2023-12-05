@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "seafoamsdyeableblocks:item/netherite_paintbrush",
+    "layer1": "seafoamsdyeableblocks:item/paintbrush_overlay"
+  }
+}

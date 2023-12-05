@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+	  "seafoamsdyeableblocks:dyeable_planks",
+	  "seafoamsdyeableblocks:dyeable_plank_stairs",
+	  "seafoamsdyeableblocks:dyeable_plank_slab",
+	  "seafoamsdyeableblocks:dyeable_stripped_log",
+	  "seafoamsdyeableblocks:dyeable_stripped_wood"
+  ]
+}

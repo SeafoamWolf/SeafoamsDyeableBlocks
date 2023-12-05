@@ -1,11 +1,10 @@
-package seafomwolf.seafoamsdyeableblocks.fabric;
+package seafoamwolf.seafoamsdyeableblocks.fabric;
 
-import seafomwolf.seafoamsdyeableblocks.DyeableBlocksExpectPlatform;
 import org.quiltmc.loader.api.QuiltLoader;
 
 import java.nio.file.Path;
 
-public class DyeableBlocksPlatformImpl {
+public class DyeableBlocksExpectPlatformImpl {
     /**
      * This is our actual method to {@link DyeableBlocksPlatform#getConfigDirectory()}.
      */

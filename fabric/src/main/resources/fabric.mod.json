@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "seafoamwolf.seafoamsdyeableblocks.fabric.SeafoamsDyeableBlocks"
+      "seafoamwolf.seafoamsdyeableblocks.fabric.DyeableBlocksFabric"
     ]
   },
   "depends": {

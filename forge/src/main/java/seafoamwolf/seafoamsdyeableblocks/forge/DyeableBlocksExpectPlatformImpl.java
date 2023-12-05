@@ -1,6 +1,6 @@
-package net.seafoamsdyeableblocks.forge;
+package seafoamwolf.seafoamsdyeableblocks.forge;
 
-import net.seafoamsdyeableblocks.ExampleExpectPlatform;
+import seafoamwolf.seafoamsdyeableblocks.DyeableBlocksExpectPlatform;
 import net.minecraftforge.fml.loading.FMLPaths;
 
 import java.nio.file.Path;

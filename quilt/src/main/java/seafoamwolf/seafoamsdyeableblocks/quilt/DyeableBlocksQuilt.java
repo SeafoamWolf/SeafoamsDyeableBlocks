@@ -1,6 +1,6 @@
-package seafomwolf.seafoamsdyeableblocks.quilt;
+package seafoamwolf.seafoamsdyeableblocks.quilt;
 
-import seafomwolf.seafoamsdyeableblocks.fabriclike.DyeableBlocksFabricLike;
+import seafoamwolf.seafoamsdyeableblocks.fabriclike.DyeableBlocksFabricLike;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 

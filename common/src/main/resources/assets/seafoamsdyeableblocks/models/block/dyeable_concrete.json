@@ -1,0 +1,5 @@
+{	"parent": "seafoamsdyeableblocks:block/dyeable_block",
+	"textures": {
+		"all": "minecraft:block/white_concrete"
+	}
+}
